@@ -1,0 +1,151 @@
+// Variables
+
+$osoc-green: #229387;
+
+// new colors
+
+$color-green: #7ab800;
+$color-red: #ff3333;
+$color-blue: #00a5e0;
+$color-dark-grey: #2D2D2D;
+
+$color-white: #FFF;
+
+/* =============================
+* CLEARFIX
+* ============================== */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+
+/* =============================
+* STYLES
+* ============================== */
+
+html, body{
+  font-family: 'Lato', sans-serif;
+
+  color: $color-dark-grey;
+}
+
+a{
+  color: $color-blue;
+}
+
+#intro {
+  background-color: #AAA;
+
+  h1 {
+
+  }
+
+  p {
+
+  }
+}
+
+#subscribe {
+  background-color: #CCC;
+  h2 {
+
+  }
+
+  p {
+
+  }
+}
+
+#meeting {
+  background-color: #AAA;
+  h2 {
+
+  }
+
+  p {
+
+  }
+}
+
+#getting-started {
+  background-color: #CCC;
+  h2 {
+
+  }
+
+  p {
+
+  }
+}
+
+#validate {
+  background-color: #AAA;
+  h2 {
+
+  }
+
+  p {
+
+  }
+}
+
+#faq {
+  background-color: #CCC;
+  h2 {
+
+  }
+
+  p {
+
+  }
+}
+
+#partners {
+  background-color: #AAA;
+  h2 {
+
+  }
+
+  p {
+
+  }
+}
+
+#footer {
+  background-color: #CCC;
+  h2 {
+
+  }
+
+  p {
+
+  }
+}
+/* =============================
+* MEDIA QUERIES
+* ============================== */
+
+/* Smartphones */
+@media screen and (max-width: 480px){
+
+}
+
+/* ===============================
+* BOOTSTRAP OVERRIDES
+*================================= */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container {
+  max-width: 760px;
+}

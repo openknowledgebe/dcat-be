@@ -1,0 +1,63 @@
+/* =============================
+* CLEARFIX
+* ============================== */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
+/* =============================
+* STYLES
+* ============================== */
+html, body {
+  font-family: 'Lato', sans-serif;
+  color: #2D2D2D; }
+
+a {
+  color: #00a5e0; }
+
+#intro {
+  background-color: #AAA; }
+
+#subscribe {
+  background-color: #CCC; }
+
+#meeting {
+  background-color: #AAA; }
+
+#getting-started {
+  background-color: #CCC; }
+
+#validate {
+  background-color: #AAA; }
+
+#faq {
+  background-color: #CCC; }
+
+#partners {
+  background-color: #AAA; }
+
+#footer {
+  background-color: #CCC; }
+
+/* =============================
+* MEDIA QUERIES
+* ============================== */
+/* Smartphones */
+/* ===============================
+* BOOTSTRAP OVERRIDES
+*================================= */
+.row {
+  margin-left: 0;
+  margin-right: 0; }
+
+.container {
+  max-width: 760px; }
+
+/*# sourceMappingURL=default.css.map */
