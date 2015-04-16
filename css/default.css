@@ -20,31 +20,21 @@ html, body {
   color: #2D2D2D; }
 
 a {
-  color: #00a5e0; }
+  color: #3F3F3F;
+  text-decoration: underline; }
+  a:hover {
+    color: #2D2D2D; }
 
 #intro {
-  background-color: #AAA; }
-
-#subscribe {
-  background-color: #CCC; }
-
-#meeting {
-  background-color: #AAA; }
-
-#getting-started {
-  background-color: #CCC; }
-
-#validate {
-  background-color: #AAA; }
-
-#faq {
-  background-color: #CCC; }
-
-#partners {
-  background-color: #AAA; }
+  background-color: #229387; }
+  #intro h1 {
+    margin-top: 90px; }
 
 #footer {
-  background-color: #CCC; }
+  background-color: #229387; }
+  #footer p {
+    margin-top: 1em;
+    margin-bottom: 1em; }
 
 /* =============================
 * MEDIA QUERIES
@@ -58,6 +48,6 @@ a {
   margin-right: 0; }
 
 .container {
-  max-width: 760px; }
+  max-width: 960px; }
 
 /*# sourceMappingURL=default.css.map */
