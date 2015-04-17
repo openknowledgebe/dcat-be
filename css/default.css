@@ -12,34 +12,6 @@
 .clearfix {
   *zoom: 1; }
 
-/* =============================
-* STYLES
-* ============================== */
-html, body {
-  font-family: 'Lato', sans-serif;
-  color: #2D2D2D; }
-
-a {
-  color: #3F3F3F;
-  text-decoration: underline; }
-  a:hover {
-    color: #2D2D2D; }
-
-#intro {
-  background-color: #229387; }
-  #intro h1 {
-    margin-top: 90px; }
-
-#footer {
-  background-color: #229387; }
-  #footer p {
-    margin-top: 1em;
-    margin-bottom: 1em; }
-
-/* =============================
-* MEDIA QUERIES
-* ============================== */
-/* Smartphones */
 /* ===============================
 * BOOTSTRAP OVERRIDES
 *================================= */
@@ -49,5 +21,125 @@ a {
 
 .container {
   max-width: 960px; }
+
+textarea {
+  resize: vertical; }
+
+.btn {
+  background-color: #2D2D2D;
+  color: #FFF;
+  border-color: #2D2D2D; }
+  .btn:hover, .btn:active, .btn:focus {
+    background-color: #2D2D2D;
+    color: #7ab800;
+    border-color: #2D2D2D;
+    box-shadow: none;
+    outline: none; }
+
+.form-control {
+  color: #2D2D2D;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .form-control:focus {
+    color: #2D2D2D;
+    border-color: #7ab800;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+.btn, .form-control {
+  transition: all 0.3s; }
+
+/* =============================
+* STYLES
+* ============================== */
+html, body {
+  font-family: 'Lato', sans-serif;
+  color: #2D2D2D; }
+
+h1, h2, h3 {
+  font-weight: 500; }
+
+h2 {
+  font-size: 1.8em; }
+
+a {
+  color: #00a5e0; }
+  a:hover, a:active {
+    color: #00a5e0; }
+
+#intro {
+  background-color: #7ab800;
+  color: #FFF;
+  padding-bottom: 20px;
+  padding-top: 90px; }
+  #intro h1 {
+    font-size: 3em;
+    text-transform: uppercase; }
+  #intro h2 {
+    margin-top: 0; }
+  #intro p {
+    font-size: 1.1em;
+    margin-bottom: 0.3em; }
+    #intro p.intro-description {
+      font-style: italic; }
+  #intro .form-control {
+    background-color: #7ab800;
+    color: #FFF;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+    #intro .form-control:focus {
+      color: #FFF;
+      border-color: #FFF;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+  #intro .form-group {
+    margin-bottom: 0.5em; }
+
+#meeting {
+  padding-top: 20px; }
+  #meeting h2 {
+    margin-top: 0; }
+  #meeting .list-group .list-group-item {
+    color: #2D2D2D;
+    transition: all 0.2s; }
+    #meeting .list-group .list-group-item:hover {
+      background-color: #8bd200;
+      border-color: #8bd200;
+      color: #FFF; }
+  #meeting .list-group .list-group-item-info {
+    border-color: #7ab800;
+    background-color: #7ab800;
+    color: #FFF;
+    font-size: 1.2em; }
+    #meeting .list-group .list-group-item-info:hover {
+      border-color: #7ab800;
+      background-color: #7ab800; }
+
+#footer {
+  background-color: #2D2D2D;
+  color: #7ab800; }
+  #footer p {
+    margin-top: 1em;
+    margin-bottom: 1em; }
+  #footer a, #footer a:active, #footer a:hover, #footer a:focus {
+    color: #7ab800;
+    style: underline; }
+
+/* =============================
+* MEDIA QUERIES
+* ============================== */
+/* Smartphones */
+.form-control::-webkit-input-placeholder {
+  color: #ccc; }
+
+.form-control:-moz-placeholder {
+  color: #ccc;
+  opacity: 1; }
+
+.form-control::-moz-placeholder {
+  color: #ccc; }
+
+.form-control:-ms-input-placeholder {
+  color: #ccc; }
 
 /*# sourceMappingURL=default.css.map */

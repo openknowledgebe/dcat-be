@@ -1,10 +1,10 @@
 // Variables
-
 $osoc-green: #229387;
 
 // new colors
-
 $color-green: #7ab800;
+$color-light-green: lighten( $color-green, 5% );
+$color-dark-green: darken( $color-green, 10% );
 $color-red: #ff3333;
 $color-blue: #00a5e0;
 $color-dark-grey: #2D2D2D;
@@ -28,55 +28,160 @@ $color-white: #FFF;
   *zoom: 1;
 }
 
+/* ===============================
+* BOOTSTRAP OVERRIDES
+*================================= */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.container {
+  max-width: 960px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  background-color: $color-dark-grey;
+  color: $color-white;
+  border-color: $color-dark-grey;
+
+  &:hover, &:active, &:focus {
+    background-color: $color-dark-grey;
+    color: $color-green;
+    border-color: $color-dark-grey;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.form-control{
+  color: $color-dark-grey;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+
+  &:focus{
+    color: $color-dark-grey;
+    border-color: $color-green;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.btn, .form-control {
+  transition: all 0.3s;
+}
+
 /* =============================
 * STYLES
 * ============================== */
 
 html, body{
   font-family: 'Lato', sans-serif;
-
   color: $color-dark-grey;
 }
 
-a{
-  color: $color-light-grey;
-  text-decoration: underline;
+h1, h2, h3 {
+  font-weight: 500;
+}
 
-  &:hover {
-    color: $color-dark-grey;
+h2 {
+  font-size: 1.8em;
+}
+
+a{
+  color: $color-blue;
+
+  &:hover, &:active {
+    color: $color-blue;
   }
 }
 
 #intro {
-  background-color: $osoc-green;
+  background-color: $color-green;
+  color: $color-white;
+  padding-bottom: 20px;
+  padding-top: 90px;
 
   h1 {
-    margin-top: 90px;
+    font-size: 3em;
+    text-transform: uppercase;
   }
 
-  p {
-
-  }
-}
-
-#subscribe {
   h2 {
-
+    margin-top: 0;
   }
 
   p {
+    font-size: 1.1em;
+    margin-bottom: 0.3em;
 
+    &.intro-description {
+      font-style: italic;
+    }
+
+  }
+
+  .form-control{
+    background-color: $color-green;
+    color: $color-white;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    &:focus{
+      color: $color-white;
+      border-color: $color-white;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 0.5em;
   }
 }
 
 #meeting {
+  padding-top: 20px;
   h2 {
-
+    margin-top: 0;
   }
 
   p {
 
   }
+
+  .list-group {
+
+    .list-group-item {
+      color: $color-dark-grey;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: $color-light-green;
+        border-color: $color-light-green;
+        color: $color-white;
+      }
+    }
+
+    .list-group-item-info {
+      border-color: $color-green;
+      background-color: $color-green;
+      color: $color-white;
+      font-size: 1.2em;
+
+      &:hover {
+        border-color: $color-green;
+        background-color: $color-green;
+      }
+    }
+
+  }
+
+
 }
 
 #getting-started {
@@ -120,11 +225,17 @@ a{
 }
 
 #footer {
-  background-color: $osoc-green;
+  background-color: $color-dark-grey;
+  color: $color-green;
 
   p {
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+
+  a, a:active, a:hover, a:focus {
+    color: $color-green;
+    style: underline;
   }
 }
 /* =============================
@@ -135,15 +246,7 @@ a{
 @media screen and (max-width: 480px){
 
 }
-
-/* ===============================
-* BOOTSTRAP OVERRIDES
-*================================= */
-.row {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.container {
-  max-width: 960px;
-}
+.form-control::-webkit-input-placeholder { color: #ccc; }
+.form-control:-moz-placeholder { color: #ccc; opacity: 1;}
+.form-control::-moz-placeholder { color: #ccc; }
+.form-control:-ms-input-placeholder { color: #ccc; }
