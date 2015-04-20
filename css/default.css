@@ -20,23 +20,24 @@
   margin-right: 0; }
 
 .container {
-  max-width: 960px; }
+  max-width: 805px; }
 
-textarea {
-  resize: vertical; }
+.header-container {
+  max-width: 965px; }
 
 .btn {
-  background-color: #2D2D2D;
-  color: #FFF;
-  border-color: #2D2D2D; }
+  background-color: #FFFFFF;
+  color: #7ab800;
+  border-color: #7ab800; }
   .btn:hover, .btn:active, .btn:focus {
-    background-color: #2D2D2D;
+    background-color: #EFEFEF;
+    border-color: #7ab800;
     color: #7ab800;
-    border-color: #2D2D2D;
     box-shadow: none;
     outline: none; }
 
 .form-control {
+  border-color: #7ab800;
   color: #2D2D2D;
   -webkit-box-shadow: none;
   box-shadow: none; }
@@ -49,32 +50,59 @@ textarea {
 .btn, .form-control {
   transition: all 0.3s; }
 
+textarea {
+  resize: vertical;
+  color: #2D2D2D;
+  font-family: "Courier New", Courier, monospace; }
+  textarea:focus {
+    background-color: #EFEFEF; }
+
+.divider {
+  border-color: #CFCFCF; }
+
+.panel .panel-heading {
+  background-color: #EFEFEF;
+  border-color: #CFCFCF; }
+.panel .panel-body {
+  background-color: #FFFFFF;
+  border-color: #CFCFCF; }
+
 /* =============================
 * STYLES
 * ============================== */
 html, body {
   font-family: 'Lato', sans-serif;
-  color: #2D2D2D; }
+  color: #2D2D2D;
+  background-color: #FAFAFA; }
 
 h1, h2, h3 {
-  font-weight: 500; }
+  font-weight: bold; }
 
 h2 {
-  font-size: 1.8em; }
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.5em;
+  margin-top: 0.5em; }
 
 a {
   color: #00a5e0; }
   a:hover, a:active {
     color: #00a5e0; }
 
+.container .section {
+  margin-bottom: 3em; }
+
 #intro {
-  background-color: #7ab800;
-  color: #FFF;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #CFCFCF;
+  color: #7ab800;
   padding-bottom: 20px;
   padding-top: 90px; }
   #intro h1 {
     font-size: 3em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-top: 0; }
   #intro h2 {
     margin-top: 0; }
   #intro p {
@@ -83,13 +111,14 @@ a {
     #intro p.intro-description {
       font-style: italic; }
   #intro .form-control {
-    background-color: #7ab800;
-    color: #FFF;
+    background-color: #FFFFFF;
+    color: #7ab800;
+    border-color: #7ab800;
     -webkit-box-shadow: none;
     box-shadow: none; }
     #intro .form-control:focus {
-      color: #FFF;
-      border-color: #FFF;
+      color: #7ab800;
+      background-color: #EFEFEF;
       -webkit-box-shadow: none;
       box-shadow: none; }
   #intro .form-group {
@@ -100,20 +129,35 @@ a {
   #meeting h2 {
     margin-top: 0; }
   #meeting .list-group .list-group-item {
+    padding: 5px 15px;
+    position: relative;
     color: #2D2D2D;
+    border-color: #CFCFCF;
     transition: all 0.2s; }
+    #meeting .list-group .list-group-item .arrow-right {
+      position: absolute;
+      top: 1.5em;
+      right: 1.5em;
+      transition: all 0.3s; }
     #meeting .list-group .list-group-item:hover {
-      background-color: #8bd200;
-      border-color: #8bd200;
-      color: #FFF; }
-  #meeting .list-group .list-group-item-info {
-    border-color: #7ab800;
-    background-color: #7ab800;
-    color: #FFF;
-    font-size: 1.2em; }
-    #meeting .list-group .list-group-item-info:hover {
-      border-color: #7ab800;
-      background-color: #7ab800; }
+      background-color: #EFEFEF; }
+      #meeting .list-group .list-group-item:hover .arrow-right {
+        position: absolute;
+        top: 1.5em;
+        right: 1em;
+        color: #00a5e0; }
+
+#basics .code-example {
+  font-family: "Courier New", Courier, monospace;
+  font-size: .8em; }
+  #basics .code-example p {
+    white-space: pre;
+    margin-bottom: 0; }
+#basics .code-details {
+  font-size: 1.2em;
+  font-weight: bold; }
+#basics .code-details-fullwidth {
+  margin-bottom: 1.5em; }
 
 #footer {
   background-color: #2D2D2D;

@@ -10,7 +10,10 @@ $color-blue: #00a5e0;
 $color-dark-grey: #2D2D2D;
 $color-light-grey: #3F3F3F;
 
-$color-white: #FFF;
+$color-white: #FFFFFF;
+$color-med-white: #FAFAFA;
+$color-dark-white: #EFEFEF;
+$color-darkest-white: #CFCFCF;
 
 /* =============================
 * CLEARFIX
@@ -37,28 +40,31 @@ $color-white: #FFF;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 805px;
 }
 
-textarea {
-  resize: vertical;
+.header-container {
+  max-width: 965px;
 }
+
+
 
 .btn {
-  background-color: $color-dark-grey;
-  color: $color-white;
-  border-color: $color-dark-grey;
+  background-color: $color-white;
+  color: $color-green;
+  border-color: $color-green;
 
   &:hover, &:active, &:focus {
-    background-color: $color-dark-grey;
+    background-color: $color-dark-white;
+    border-color: $color-green;
     color: $color-green;
-    border-color: $color-dark-grey;
     box-shadow: none;
     outline: none;
   }
 }
 
 .form-control{
+  border-color: $color-green;
   color: $color-dark-grey;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -75,6 +81,32 @@ textarea {
   transition: all 0.3s;
 }
 
+textarea {
+  resize: vertical;
+  color: $color-dark-grey;
+  font-family: "Courier New", Courier, monospace;
+
+  &:focus {
+    background-color: $color-dark-white;
+  }
+}
+
+.divider {
+  border-color: $color-darkest-white;
+}
+
+.panel {
+  .panel-heading {
+    background-color: $color-dark-white;
+    border-color: $color-darkest-white;
+  }
+
+  .panel-body {
+    background-color: $color-white;
+    border-color: $color-darkest-white;
+  }
+}
+
 /* =============================
 * STYLES
 * ============================== */
@@ -82,14 +114,20 @@ textarea {
 html, body{
   font-family: 'Lato', sans-serif;
   color: $color-dark-grey;
+  background-color: $color-med-white;
 }
 
 h1, h2, h3 {
-  font-weight: 500;
+  font-weight: bold;
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-top: 0.5em;
 }
 
 a{
@@ -100,15 +138,23 @@ a{
   }
 }
 
+.container {
+  .section {
+    margin-bottom: 3em;
+  }
+}
+
 #intro {
-  background-color: $color-green;
-  color: $color-white;
+  background-color: $color-white;
+  border-bottom: 1px solid $color-darkest-white;
+  color: $color-green;
   padding-bottom: 20px;
   padding-top: 90px;
 
   h1 {
     font-size: 3em;
     text-transform: uppercase;
+    margin-top: 0;
   }
 
   h2 {
@@ -126,14 +172,15 @@ a{
   }
 
   .form-control{
-    background-color: $color-green;
-    color: $color-white;
+    background-color: $color-white;
+    color: $color-green;
+    border-color: $color-green;
     -webkit-box-shadow: none;
     box-shadow: none;
 
     &:focus{
-      color: $color-white;
-      border-color: $color-white;
+      color: $color-green;
+      background-color: $color-dark-white;
       -webkit-box-shadow: none;
       box-shadow: none;
     }
@@ -157,28 +204,31 @@ a{
   .list-group {
 
     .list-group-item {
+      padding: 5px 15px;
+
+      position: relative;
       color: $color-dark-grey;
+      border-color: $color-darkest-white;
       transition: all 0.2s;
 
-      &:hover {
-        background-color: $color-light-green;
-        border-color: $color-light-green;
-        color: $color-white;
+      .arrow-right {
+        position: absolute;
+        top: 1.5em;
+        right: 1.5em;
+        transition: all 0.3s;
       }
-    }
-
-    .list-group-item-info {
-      border-color: $color-green;
-      background-color: $color-green;
-      color: $color-white;
-      font-size: 1.2em;
 
       &:hover {
-        border-color: $color-green;
-        background-color: $color-green;
+        background-color: $color-dark-white;
+
+        .arrow-right {
+          position: absolute;
+          top: 1.5em;
+          right: 1em;
+          color: $color-blue;
+        }
       }
     }
-
   }
 
 
@@ -191,6 +241,27 @@ a{
 
   p {
 
+  }
+}
+
+#basics {
+  .code-example {
+    font-family: "Courier New", Courier, monospace;
+    font-size: .8em;
+
+    p {
+      white-space: pre;
+      margin-bottom: 0;
+    }
+  }
+
+  .code-details {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .code-details-fullwidth {
+    margin-bottom: 1.5em;
   }
 }
 
