@@ -9,6 +9,7 @@ $color-red: #ff3333;
 $color-blue: #00a5e0;
 $color-dark-grey: #2D2D2D;
 $color-light-grey: #3F3F3F;
+$color-lighter-grey: lighten($color-dark-grey, 20%);
 
 $color-white: #FFFFFF;
 $color-med-white: #FAFAFA;
@@ -40,34 +41,42 @@ $color-darkest-white: #CFCFCF;
 }
 
 .container {
-  max-width: 805px;
+  max-width: 965px;
 }
 
 .header-container {
   max-width: 965px;
 }
 
-
-
 .btn {
-  background-color: $color-white;
-  color: $color-green;
-  border-color: $color-green;
+  padding: 0.5em 1.5em;
+  background-color: $color-green;
+  color: $color-white;
+  border: none;
+  border-radius: 0;
+  box-shadow: 3px 3px 0 0 $color-dark-green;
+  font-weight: bold;
+  letter-spacing: 2px;
 
   &:hover, &:active, &:focus {
-    background-color: $color-dark-white;
-    border-color: $color-green;
-    color: $color-green;
-    box-shadow: none;
+    background-color: $color-green;
+    color: $color-white;
+    border: none;
+    box-shadow: 2px 2px 0 0 $color-dark-green;
     outline: none;
+    margin: 1px 0 -1px 1px;
   }
 }
 
 .form-control{
+  float: left;
+  margin-right: 0.3em;
+  margin-bottom: 0.4em;
   border-color: $color-green;
   color: $color-dark-grey;
   -webkit-box-shadow: none;
   box-shadow: none;
+  transition: all 0.3s;
 
   &:focus{
     color: $color-dark-grey;
@@ -75,10 +84,6 @@ $color-darkest-white: #CFCFCF;
     -webkit-box-shadow: none;
     box-shadow: none;
   }
-}
-
-.btn, .form-control {
-  transition: all 0.3s;
 }
 
 textarea {
@@ -92,18 +97,27 @@ textarea {
 }
 
 .divider {
-  border-color: $color-darkest-white;
+  border-top: 1px solid $color-darkest-white;
+  margin: 1em 0 0.5em 0;
 }
 
 .panel {
+  border-radius: 0;
+
   .panel-heading {
+    color: $color-dark-green;
+    border-radius: 0;
+    border-bottom: 1px transparent;
     background-color: $color-dark-white;
     border-color: $color-darkest-white;
   }
 
   .panel-body {
+    border-radius: 0;
+    border-top: 1px dashed;
     background-color: $color-white;
     border-color: $color-darkest-white;
+    padding: 0.8em 1em;
   }
 }
 
@@ -122,31 +136,38 @@ h1, h2, h3 {
 }
 
 h2 {
+  margin-top: 10px;
   font-size: 2em;
 }
 
 h3 {
   font-size: 1.5em;
   margin-top: 0.5em;
+  margin-bottom: 0.2em;
+  color: $color-green;
 }
 
 a{
-  color: $color-blue;
+  color: $color-green;
 
   &:hover, &:active {
-    color: $color-blue;
+    color: $color-green;
   }
+}
+
+p {
+  line-height: 1.8em;
 }
 
 .container {
   .section {
-    margin-bottom: 3em;
+    padding: 1.5em 0;
   }
 }
 
 #intro {
-  background-color: $color-white;
-  border-bottom: 1px solid $color-darkest-white;
+  position: relative;
+  background-color: $color-dark-grey;
   color: $color-green;
   padding-bottom: 20px;
   padding-top: 90px;
@@ -157,29 +178,27 @@ a{
     margin-top: 0;
   }
 
-  h2 {
-    margin-top: 0;
-  }
-
   p {
+    line-height: 1.5em;
     font-size: 1.1em;
     margin-bottom: 0.3em;
 
     &.intro-description {
       font-style: italic;
     }
-
   }
 
   .form-control{
+    border-radius: 0;
     background-color: $color-white;
-    color: $color-green;
-    border-color: $color-green;
+    color: $color-dark-grey;
+    border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
+    max-width: 200px;
 
     &:focus{
-      color: $color-green;
+      color: $color-dark-grey;
       background-color: $color-dark-white;
       -webkit-box-shadow: none;
       box-shadow: none;
@@ -187,25 +206,15 @@ a{
   }
 
   .form-group {
-    margin-bottom: 0.5em;
+    margin-bottom: 0em;
   }
 }
 
 #meeting {
-  padding-top: 20px;
-  h2 {
-    margin-top: 0;
-  }
-
-  p {
-
-  }
-
   .list-group {
-
     .list-group-item {
+      border-radius: 0;
       padding: 5px 15px;
-
       position: relative;
       color: $color-dark-grey;
       border-color: $color-darkest-white;
@@ -225,29 +234,32 @@ a{
           position: absolute;
           top: 1.5em;
           right: 1em;
-          color: $color-blue;
+          color: $color-green;
         }
       }
     }
   }
-
-
 }
 
-#getting-started {
-  h2 {
+#getting-started-container {
+  background-color: $color-dark-white;
+  border-top: 2px dashed $color-darkest-white;
+  border-bottom: 2px dashed $color-darkest-white;
 
-  }
-
-  p {
+  #getting-started {
 
   }
 }
 
 #basics {
+
+}
+
+#dcat-example{
   .code-example {
     font-family: "Courier New", Courier, monospace;
-    font-size: .8em;
+    font-size: 0.8em;
+    overflow: auto;
 
     p {
       white-space: pre;
@@ -256,43 +268,38 @@ a{
   }
 
   .code-details {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
+    span {
+      font-size: 1.2em;
+      font-weight: bold;
+    }
 
-  .code-details-fullwidth {
-    margin-bottom: 1.5em;
+    p {
+      margin-bottom: 2em;
+    }
   }
 }
 
 #validate {
-  h2 {
 
-  }
-
-  p {
-
-  }
 }
 
 #faq {
-  h2 {
-
+  h3 {
+    color: $color-dark-grey;
   }
 
   p {
+    margin-bottom: 2em;
+    color: $color-lighter-grey;
 
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }
 
 #partners {
-  h2 {
 
-  }
-
-  p {
-
-  }
 }
 
 #footer {
@@ -300,13 +307,11 @@ a{
   color: $color-green;
 
   p {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em 0;
   }
 
   a, a:active, a:hover, a:focus {
-    color: $color-green;
-    style: underline;
+    text-decoration: underline;
   }
 }
 /* =============================
@@ -314,10 +319,26 @@ a{
 * ============================== */
 
 /* Smartphones */
-@media screen and (max-width: 480px){
-
+@media screen and (min-width: 480px){
+  .code-details {
+    margin-top: -10px;
+  }
 }
-.form-control::-webkit-input-placeholder { color: #ccc; }
-.form-control:-moz-placeholder { color: #ccc; opacity: 1;}
-.form-control::-moz-placeholder { color: #ccc; }
-.form-control:-ms-input-placeholder { color: #ccc; }
+
+/* Tablets */
+@media screen and (min-width: 768px){
+  .form-control{
+    float: none;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .code-details {
+    margin-top: 0px;
+  }
+}
+
+.form-control::-webkit-input-placeholder { color: lighten($color-lighter-grey, 10%); }
+.form-control:-moz-placeholder { color: lighten($color-lighter-grey, 10%); opacity: 1;}
+.form-control::-moz-placeholder { color: lighten($color-lighter-grey, 10%); }
+.form-control:-ms-input-placeholder { color: lighten($color-lighter-grey, 10%); }
