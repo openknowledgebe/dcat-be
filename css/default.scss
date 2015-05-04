@@ -3,7 +3,7 @@ $osoc-green: #229387;
 
 // new colors
 $color-green: #7ab800;
-$color-light-green: lighten( $color-green, 5% );
+$color-light-green: lighten( $color-green, 10% );
 $color-dark-green: darken( $color-green, 10% );
 $color-red: #ff3333;
 $color-blue: #00a5e0;
@@ -103,6 +103,7 @@ textarea {
 
 .panel {
   border-radius: 0;
+  box-shadow: 2px 2px 0 0 $color-darkest-white;
 
   .panel-heading {
     color: $color-dark-green;
@@ -110,6 +111,7 @@ textarea {
     border-bottom: 1px transparent;
     background-color: $color-dark-white;
     border-color: $color-darkest-white;
+    font-weight: bold;
   }
 
   .panel-body {
@@ -118,6 +120,24 @@ textarea {
     background-color: $color-white;
     border-color: $color-darkest-white;
     padding: 0.8em 1em;
+    word-wrap: normal;
+  }
+}
+
+blockquote {
+  background-color: $color-white;
+  border: 1px solid $color-darkest-white;
+  font-style: italic;
+  font-size: 1.2em;
+  color: $color-lighter-grey;
+  position: relative;
+  box-shadow: 2px 2px 0 0 $color-darkest-white;
+
+  .quote-author {
+    float: right;
+    margin-right: 1em;
+    font-style: normal;
+    font-size: 0.8em;
   }
 }
 
@@ -150,7 +170,7 @@ h3 {
 a{
   color: $color-green;
 
-  &:hover, &:active {
+  &:hover, &:active, &:focus {
     color: $color-green;
   }
 }
@@ -179,6 +199,7 @@ p {
   }
 
   p {
+    color: $color-white;
     line-height: 1.5em;
     font-size: 1.1em;
     margin-bottom: 0.3em;
@@ -186,6 +207,11 @@ p {
     &.intro-description {
       font-style: italic;
     }
+  }
+
+  .intro-subscribe {
+    color: $color-green;
+    font-weight: bold;
   }
 
   .form-control{
@@ -196,6 +222,10 @@ p {
     -webkit-box-shadow: none;
     box-shadow: none;
     max-width: 200px;
+
+    &:hover {
+      background-color: $color-dark-white;
+    }
 
     &:focus{
       color: $color-dark-grey;
@@ -212,6 +242,8 @@ p {
 
 #meeting {
   .list-group {
+    box-shadow: 2px 2px 0 0 $color-darkest-white;
+
     .list-group-item {
       border-radius: 0;
       padding: 5px 15px;
@@ -247,7 +279,9 @@ p {
   border-bottom: 2px dashed $color-darkest-white;
 
   #getting-started {
-
+    h2 {
+      color:$color-green;
+    }
   }
 }
 
@@ -255,17 +289,26 @@ p {
 
 }
 
-#dcat-example{
-  .code-example {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 0.8em;
-    overflow: auto;
+.code-example {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.8em;
+  overflow: auto;
+  position: relative;
 
-    p {
-      white-space: pre;
-      margin-bottom: 0;
+  p {
+    white-space: pre;
+    margin-bottom: 0;
+
+    .code-info {
+      background-color: lightblue;
+      cursor: pointer;
+      cursor: hand;
     }
   }
+}
+
+#dcat-example{
+
 
   .code-details {
     span {
@@ -298,21 +341,52 @@ p {
   }
 }
 
-#partners {
+#partners-container {
+  background-color: $color-dark-grey;
+  color: $color-white;
 
+  h2 {
+    color: $color-green;
+  }
+
+  .display-table{
+    display: table;
+    table-layout: fixed;
+  }
+
+  .display-cell{
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+  }
+
+  .partner-logos {
+    img {
+      display: block;
+      max-width: 100%;
+      max-height: 100px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 15px;
+    }
+  }
 }
 
 #footer {
   background-color: $color-dark-grey;
-  color: $color-green;
+  color: $color-white;
 
   p {
-    margin: 1em 0;
+    margin: 2em 0 1em 0;
   }
 
   a, a:active, a:hover, a:focus {
     text-decoration: underline;
   }
+}
+
+.green {
+  color:$color-green;
 }
 /* =============================
 * MEDIA QUERIES

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>DCAT Belgium</title>
-    <meta name="description" content="The Belgian standard for Open Data Catalogs (DCAT)">
+    <title>DCAT-BE</title>
+    <meta name="description" content="The Belgian standard for Open Data Catalogs (DCATw)">
     <meta name="keywords" content="dcat, open, knowledge, Ghent">
     <meta name="author" content="Open Knowledge Belgium">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +13,13 @@
     <meta property="og:url" content="http://dcat.be" />
     <meta property="og:image" content="http://dcat.be/images/socialmedia/logo.png" />
     <meta property="og:description" content="DCAT is super awesome" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@OpenKnowledgeBE">
+    <meta name="twitter:title" content="DCAT Belgium">
+    <meta name="twitter:description" content="DCAT Belgium is an Application Profile of the W3C standard to describe open datasets called DCAT">
+    <meta name="twitter:image" content="http://2015.summerofcode.be/images/socialmedia/tlogo.jpg" />
+    <meta name="twitter:url" content="http://2015.summerofcode.be/" />
+
     <link rel="stylesheet" href="css/index.css">
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -26,13 +33,13 @@
             <div class="col-xs-12 col-sm-8">
                 <h1>DCAT-BE</h1>
                 <h2>Linking data portals across Belgium.</h2>
-                <p class="intro-description">DCAT Belgium is an Application Profile of the <a href="http://www.w3.org/TR/vocab-dcat/" target="_blank"></a>W3C standard to describe open datasets called DCAT</a></p>
+                <p class="intro-description">DCAT Belgium is an Application Profile of the <a href="http://www.w3.org/TR/vocab-dcat/" target="_blank">W3C standard</a> to describe open datasets called DCAT</a></p>
                 <hr class="divider hidden-sm hidden-md hidden-lg">
             </div>
 
             <div class="col-xs-12 col-xs-offset-0 col-sm-offset-0 col-sm-4 col-md-3 col-md-offset-1">
                 <p class="intro-subscribe">
-                    <b>Subscribe to our mailing list</b>
+                    Subscribe to our mailing list
                 </p>
                 <form method="POST" action="http://lists.okfn.org/mailman/subscribe/dcat-be">
                     <div class="form-group">
@@ -53,17 +60,18 @@
         <div class="row section" id="meeting">
             <div class="col-xs-12 col-md-6">
                 <h2>Upcoming meetings</h2>
-                <p>
-                    Here you can give a brief overview of what is discussed in the meetings in general, or for the next upcoming meeting. Anything that is relevant can be posted here.
-                   </p>
-                <p>
-                    <a href="http://www.doodle.com">Open Data in Belgium</a>
-                    <br>Thu, 2/02/2015 - 13:30 - 15:30
-                </p>
+                <p id="upcoming-meeting-desc"></p>
+                <div class="list-group" id="upcoming-meeting">
+                    <a href="http://www.doodle.com" class="list-group-item">
+                        Open Data in Belgium
+                        <br>Thu, 2/02/2015 - 13:30 - 15:30
+                        <i class="fa fa-chevron-right arrow-right"></i>
+                    </a>
+                </div>
             </div>
             <div class="col-xs-12 col-md-6">
                 <h2>Previous meetings</h2>
-                <div class="list-group">
+                <div class="list-group" id="past-meetings">
                     <a href="http://belgif.be/meeting/open-data-portals-2015-02" class="list-group-item">
                         Open Data Portals
                         <br>Thu, 12/02/2015 - 13:30 - 15:30
@@ -93,14 +101,22 @@
             <div class="row section" id="getting-started">
                 <div class="col-xs-12 col-md-6">
                     <h2>What is DCAT?</h2>
+
+                        <blockquote>
+                    “DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web”
+                    <br><span class="quote-author">- W3C</span>
+                    <div class="clearfix"></div>
+                        </blockquote>
                     <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                    </p>
+                        Basically, DCAT is a way to provide additional information to your data, so called “meta-data”.
+                        With this information, others can easily find all the data you want to publish in order to further develop upon this information. </p>
                 </div>
                 <div class="col-xs-12 col-md-6">
                     <h2>How do I begin?</h2>
                     <p>
-                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+                        There are different ways to begin organising your data with DCAT. The option we opt for is the Turtle or JSON-LD format.
+                        These formats are very accessible, structured and easy to use. All the meta-data is collected in a separate "file", which can be interpretted by a machine to process the information.
+                        <br>Another option is to define your DCAT within the HTML of your webpage. The Open Data Institue has an excellent <a href="https://theodi.org/guides/marking-up-your-dataset-with-dcat">guide</a> to get you started with this format.
                     </p>
                 </div>
             </div>
@@ -114,25 +130,25 @@
             </div>
             <div class="col-xs-12">
                 <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                    DCAT describes datasets on 3 different levels. The Catalog, the Dataset and the Distribution level. Each level contains information, meta-data, about itself, such as the title, description, and so on. Furthermore, the upper layers contains URI references to its children, which means it’s easy to cross-reference all of the data.
                 </p>
             </div>
             <div class="col-xs-12 col-md-4">
                 <h3>dcat:Catalog</h3>
                 <p>
-                    Represents the catalog. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                    The Catalog is the upper level in the DCAT standard. It contains a description of itself, such as the title, description, publisher and licenses. It also contains references to the different Datasets which can be found within this particular Data Catalog.
                 </p>
             </div>
             <div class="col-xs-12 col-md-4">
                 <h3>dcat:Dataset</h3>
                 <p>
-                    Represents a dataset in a catalog. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                    The Dataset contains information about the individual Dataset, such as the author, which category the dataset belongs to, geographical information, and so on. It also has references to all the different Distribution methods of this particular dataset.
                 </p>
             </div>
             <div class="col-xs-12 col-md-4">
                 <h3>dcat:Distribution</h3>
                 <p>
-                    Represents an accessible form of a dataset as for example a downloadable file, an RSS feed or a web service that provides the data
+                    This is the deepest level of the DCAT standard. At this level we define the access URL for the data, type (CSV, JSON, …), license, size, download URL, and so on.
                 </p>
             </div>
         </div>
@@ -140,14 +156,37 @@
     <div class="container">
         <div class="row section" id="dcat-example">
             <div class="col-xs-12">
-                <h2>Example</h2>
+                <h2>Live Examples</h2>
+            </div>
+            <div class="col-xs-12">
+                <p>
+                    There are already several government instances that are using DCAT, but our goal is to convince every data publisher to start using this standard.
+                </p>
+                <p>
+                    <a href="http://data.kortrijk.be/api/dcat" class="exampleDcat">DCAT Kortrijk</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                    <br>
+                    <a href="http://demo.thedatatank.com/api/dcat" class="exampleDcat">DCAT TheDataTank demo</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                </p>
+            </div>
+            <div class="col-xs-12" id="live-example">
+                <div class="panel panel-default">
+                    <div class="panel-heading" id="live-example-title">
+
+                    </div>
+                    <div class="panel-body code-example" id="live-example-code">
+                        <p></p>
+                    </div>
+                    <div class="panel-footer" id="live-example-footer">
+                        <a href="">Click here for the full set</a>
+                    </div>
+                </div>
             </div>
 
             <!-- dcat:Catalog example -->
             <div class="col-xs-12 col-md-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <b>dcat:Catalog</b>
+                        dcat:Catalog
                     </div>
                     <div class="panel-body code-example">
 <p>:catalog
@@ -171,7 +210,7 @@
             <div class="col-xs-12 col-md-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <b>Further description of :transparency-office (dct:publisher)</b>
+                        Further description of :transparency-office (dct:publisher)
                     </div>
                     <div class="panel-body code-example">
                         <p>:transparency-office
@@ -190,7 +229,7 @@
             <div class="col-xs-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <b>dcat:Dataset (:dataset-001)</b>
+                       dcat:Dataset (:dataset-001)
                     </div>
                     <div class="panel-body code-example">
                         <p>:dataset-001
@@ -222,7 +261,7 @@
             <div class="col-xs-12 col-md-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <b>dcat:Distribution (:dataset-001-csv)</b>
+                        dcat:Distribution (:dataset-001-csv)
                     </div>
                     <div class="panel-body code-example">
                         <p>:dataset-001-csv
@@ -271,20 +310,39 @@
 
                 </div>
         </div>
-
-        <div class="row section" id="partners">
+    </div>
+    <div class="row" id="partners-container">
+        <div class="container section" id="partners">
             <div class="col-xs-12">
                 <h2>Partners</h2>
-                <p>
-                    Fedict
-                    Flemish Government
-                    ProXML
-                    iMinds
-                    MMLab
-                    Open Knowledge Belgium
-                    Tenforce
-                    We Open Data
-                </p>
+            </div>
+            <div class="row display-table partner-logos">
+                <div class="col-xs-3 display-cell">
+                    <img src="images/sponsors/fedict.png" alt="Fedict" title="Fedict">
+                </div>
+                <div class="col-xs-3 display-cell">
+                    <img src="images/sponsors/flanders.jpg" alt="Flanders" title="Flanders">
+                </div>
+                <div class="col-xs-3 display-cell">
+                    <img src="images/sponsors/proxml.png" alt="ProXML" title="ProXML">
+                </div>
+                <div class="col-xs-3 display-cell">
+                    <img src="images/sponsors/iminds.png" alt="iMinds" title="iMinds">
+                </div>
+            </div>
+            <div class="row display-table partner-logos">
+                <div class="col-xs-3 display-cell">
+                    <img src="images/sponsors/mmlab.gif" alt="MMLab" title="MMLab">
+                </div>
+                <div class="col-xs-3 display-cell">
+                    <img src="images/sponsors/okb.png" alt="Open Knowledge Belgium" title="Open Knowledge Belgium">
+                </div>
+                <div class="col-xs-3 display-cell">
+                    <img src="images/sponsors/tenforce.png" alt="Tenforce" title="Tenforce">
+                </div>
+                <div class="col-xs-3 display-cell">
+                    <img src="images/sponsors/weopendata.png" alt="We Open Data" title="We Open Data">
+                </div>
             </div>
         </div>
     </div>

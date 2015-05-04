@@ -69,19 +69,36 @@ textarea {
   margin: 1em 0 0.5em 0; }
 
 .panel {
-  border-radius: 0; }
+  border-radius: 0;
+  box-shadow: 2px 2px 0 0 #CFCFCF; }
   .panel .panel-heading {
     color: #588500;
     border-radius: 0;
     border-bottom: 1px transparent;
     background-color: #EFEFEF;
-    border-color: #CFCFCF; }
+    border-color: #CFCFCF;
+    font-weight: bold; }
   .panel .panel-body {
     border-radius: 0;
     border-top: 1px dashed;
     background-color: #FFFFFF;
     border-color: #CFCFCF;
-    padding: 0.8em 1em; }
+    padding: 0.8em 1em;
+    word-wrap: normal; }
+
+blockquote {
+  background-color: #FFFFFF;
+  border: 1px solid #CFCFCF;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #606060;
+  position: relative;
+  box-shadow: 2px 2px 0 0 #CFCFCF; }
+  blockquote .quote-author {
+    float: right;
+    margin-right: 1em;
+    font-style: normal;
+    font-size: 0.8em; }
 
 /* =============================
 * STYLES
@@ -106,7 +123,7 @@ h3 {
 
 a {
   color: #7ab800; }
-  a:hover, a:active {
+  a:hover, a:active, a:focus {
     color: #7ab800; }
 
 p {
@@ -126,11 +143,15 @@ p {
     text-transform: uppercase;
     margin-top: 0; }
   #intro p {
+    color: #FFFFFF;
     line-height: 1.5em;
     font-size: 1.1em;
     margin-bottom: 0.3em; }
     #intro p.intro-description {
       font-style: italic; }
+  #intro .intro-subscribe {
+    color: #7ab800;
+    font-weight: bold; }
   #intro .form-control {
     border-radius: 0;
     background-color: #FFFFFF;
@@ -139,6 +160,8 @@ p {
     -webkit-box-shadow: none;
     box-shadow: none;
     max-width: 200px; }
+    #intro .form-control:hover {
+      background-color: #EFEFEF; }
     #intro .form-control:focus {
       color: #2D2D2D;
       background-color: #EFEFEF;
@@ -147,38 +170,48 @@ p {
   #intro .form-group {
     margin-bottom: 0em; }
 
-#meeting .list-group .list-group-item {
-  border-radius: 0;
-  padding: 5px 15px;
-  position: relative;
-  color: #2D2D2D;
-  border-color: #CFCFCF;
-  transition: all 0.2s; }
-  #meeting .list-group .list-group-item .arrow-right {
-    position: absolute;
-    top: 1.5em;
-    right: 1.5em;
-    transition: all 0.3s; }
-  #meeting .list-group .list-group-item:hover {
-    background-color: #EFEFEF; }
-    #meeting .list-group .list-group-item:hover .arrow-right {
+#meeting .list-group {
+  box-shadow: 2px 2px 0 0 #CFCFCF; }
+  #meeting .list-group .list-group-item {
+    border-radius: 0;
+    padding: 5px 15px;
+    position: relative;
+    color: #2D2D2D;
+    border-color: #CFCFCF;
+    transition: all 0.2s; }
+    #meeting .list-group .list-group-item .arrow-right {
       position: absolute;
       top: 1.5em;
-      right: 1em;
-      color: #7ab800; }
+      right: 1.5em;
+      transition: all 0.3s; }
+    #meeting .list-group .list-group-item:hover {
+      background-color: #EFEFEF; }
+      #meeting .list-group .list-group-item:hover .arrow-right {
+        position: absolute;
+        top: 1.5em;
+        right: 1em;
+        color: #7ab800; }
 
 #getting-started-container {
   background-color: #EFEFEF;
   border-top: 2px dashed #CFCFCF;
   border-bottom: 2px dashed #CFCFCF; }
+  #getting-started-container #getting-started h2 {
+    color: #7ab800; }
 
-#dcat-example .code-example {
+.code-example {
   font-family: "Courier New", Courier, monospace;
   font-size: 0.8em;
-  overflow: auto; }
-  #dcat-example .code-example p {
+  overflow: auto;
+  position: relative; }
+  .code-example p {
     white-space: pre;
     margin-bottom: 0; }
+    .code-example p .code-info {
+      background-color: lightblue;
+      cursor: pointer;
+      cursor: hand; }
+
 #dcat-example .code-details span {
   font-size: 1.2em;
   font-weight: bold; }
@@ -193,13 +226,36 @@ p {
   #faq p:last-of-type {
     margin-bottom: 0; }
 
+#partners-container {
+  background-color: #2D2D2D;
+  color: #FFFFFF; }
+  #partners-container h2 {
+    color: #7ab800; }
+  #partners-container .display-table {
+    display: table;
+    table-layout: fixed; }
+  #partners-container .display-cell {
+    display: table-cell;
+    vertical-align: middle;
+    float: none; }
+  #partners-container .partner-logos img {
+    display: block;
+    max-width: 100%;
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px; }
+
 #footer {
   background-color: #2D2D2D;
-  color: #7ab800; }
+  color: #FFFFFF; }
   #footer p {
-    margin: 1em 0; }
+    margin: 2em 0 1em 0; }
   #footer a, #footer a:active, #footer a:hover, #footer a:focus {
     text-decoration: underline; }
+
+.green {
+  color: #7ab800; }
 
 /* =============================
 * MEDIA QUERIES

@@ -1,0 +1,37 @@
+{
+  "upcoming": [
+    {
+      "startDate": 1410629485228,
+      "endDate": 1410629486228,
+      "name": "Open Data in Belgium",
+      "link": "http://www.doodle.com",
+      "description": "Here you can give a brief overview of what is discussed in the meetings in general, or for the next upcoming meeting. Anything that is relevant can be posted here."
+    }
+  ],
+  "past": [
+    {
+      "startDate": 1410629485228,
+      "endDate": 1410629486228,
+      "name": "Open Data Portals",
+      "link": "http://belgif.be/meeting/open-data-portals-2015-02"
+    },
+    {
+      "startDate": 1410629485228,
+      "endDate": 1410629485228,
+      "name": "AWG Concertation",
+      "link": "http://belgif.be/meeting/awg-concertation-2014-10"
+    },
+    {
+      "startDate": 1410629485228,
+      "endDate": 1410629485228,
+      "name": "Open Data Portals",
+      "link": "http://belgif.be/meeting/open-data-portals-2014-09"
+    },
+    {
+      "startDate": 1410629485228,
+      "endDate": 1410629485228,
+      "name": "Open Data Portals",
+      "link": "http://belgif.be/meeting/open-data-portals-2014-06"
+    }
+  ]
+}
