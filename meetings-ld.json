@@ -1,0 +1,90 @@
+{
+  "@context": "http://schema.org",
+  "@id": "https://opencorporates.com/id/companies/be/0845419930",
+  "@type": "Organization",
+  "name": "Open Knowledge Belgium",
+  "url": "http://www.openknowledge.be",
+  "event": [
+    {
+      "@type": "Event",
+      "name": "Open Data Portals",
+      "startDate": "2014-06-23T14:00",
+      "endDate": "2014-06-23T16:00",
+      "organizer": {"@id": "https://opencorporates.com/id/companies/be/0845419930"},
+      "url": "http://belgif.be/meeting/open-data-portals-2014-06",
+      "location": {
+        "@type": "Place",
+        "name": "Vlaanderen BZ",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brussels",
+          "postalCode": "1000",
+          "streetAddress": "Boudewijnlaan 30"
+        }
+      }
+    },
+    {
+      "@type" : "Event",
+      "name" : "Open Data Portals",
+      "startDate" : "2014-09-18T14:00",
+      "endDate" : "2014-09-18T16:00",
+      "organizer" :{ "@id": "https://opencorporates.com/id/companies/be/0845419930"},
+      "url": "http://belgif.be/meeting/open-data-portals-2014-09"
+    },
+    {
+      "@type" : "Event",
+      "name" : "AWG Concertation",
+      "startDate" : "2014-10-09T10:00",
+      "endDate" : "2014-10-09T12:00",
+      "organizer" :{ "@id": "https://opencorporates.com/id/companies/be/0845419930"},
+      "url": "http://belgif.be/meeting/awg-concertation-2014-10",
+      "location" : {
+        "@type" : "Place",
+        "name" : "Fedict",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brussels",
+          "postalCode": "1000",
+          "streetAddress": "Simon Bolivarlaan 30"
+        }
+      }
+    },
+    {
+      "@type" : "Event",
+      "name" : "Open Data Portals",
+      "startDate" : "2015-02-12T13:30",
+      "endDate" : "2015-02-12T15:30",
+      "organizer" :{ "@id": "https://opencorporates.com/id/companies/be/0845419930"},
+      "url": "http://belgif.be/meeting/open-data-portals-2014-06",
+      "location" : {
+        "@type" : "Place",
+        "name" : "Vlaanderen BZ",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brussels",
+          "postalCode": "1000",
+          "streetAddress": "Boudewijnlaan 30"
+        }
+      }
+    },
+    {
+      "@type" : "Event",
+      "name" : "Open Data Portals",
+      "startDate" : "2015-05-08T13:30",
+      "endDate" : "2015-05-08T15:30",
+      "organizer" :{ "@id": "https://opencorporates.com/id/companies/be/0845419930"},
+      "url": "#",
+      "location" : {
+        "@type" : "Place",
+        "name" : "GIAL vzw",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brussels",
+          "postalCode": "1000",
+          "streetAddress": "Emile Jacqmainlaan 95"
+        }
+      },
+      "description": "We'll have an open discussion about Open Data Portals. Talk about Open Data Projects, review the DCAT-AP format and do some Thesauri mapping (Eurovoc, ...)"
+    }
+  ]
+}

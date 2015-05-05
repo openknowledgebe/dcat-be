@@ -1,6 +1,8 @@
 $(function(){
 
     var weekday = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    // Maximum number of past meetings to show
+    var MAXPAST = 4;
 
     init();
 
@@ -101,44 +103,64 @@ $(function(){
 
     function loadMeetings() {
         $.ajax({
-            url: 'meetings.json',
+            url: 'meetings-ld.json',
             error: function() {
                 console.log('An error has occurred');
             },
             success: function(data) {
-                parseMeetings(data);
+                parseEvents(data.event);
             },
             type: 'GET',
             cache: false
         });
     }
 
-    function parseMeetings(data) {
+    function parseEvents(events) {
+        events.sort(compareEvents);
 
-        $.each(data.upcoming, function(i, v) {
+        var countPast = 0;
+        var now = Date.now();
 
-            if(v.description && v.description.length > 0) {
-                $('#upcoming-meeting-desc').html(v.description);
+        $.each(events, function(i, v) {
+            var evDate = new Date(v.startDate);
+
+            if(evDate > now) {
+                // Event in the future
+                if(v.description && v.description.length > 0) {
+                    $('#upcoming-meeting-desc').html(v.description);
+                } else {
+                    $('#upcoming-meeting-desc').html('');
+                }
+
+                if(!v.startDate || !v.name) {
+                    $('#upcoming-meeting').html('');
+                    $('#upcoming-meeting-desc').html('Currently there are no meetings planned in the near future.');
+                } else {
+                    var t = parseEvent(v);
+                    $('#upcoming-meeting').html(t);
+                }
             } else {
-                $('#upcoming-meeting-desc').html('');
+                // Event in the past
+                if(countPast < MAXPAST) {
+                    var t = parseEvent(v);
+                    $('#past-meetings').append(t);
+                }
+                countPast++;
             }
 
-            if(!v.startDate || !v.name || !v.link) {
-                $('#upcoming-meeting').html('');
-                $('#upcoming-meeting-desc').html('Currently there are no meetings planned in the near future.');
-            } else {
-                var t = parseMeeting(v);
-                $('#upcoming-meeting').html(t);
-            }
-        });
-
-        $.each(data.past, function(i, v) {
-            var t = parseMeeting(v);
-            $('#past-meetings').append(t);
         });
     }
 
-    function parseMeeting(m) {
+    // Sorts events from recent to past
+    function compareEvents(a,b) {
+        if (a.startDate < b.startDate)
+            return 1;
+        if (a.startDate > b.startDate)
+            return -1;
+        return 0;
+    }
+
+    function parseEvent(m) {
         var meeting;
 
         var date = new Date(m.startDate);
@@ -158,7 +180,7 @@ $(function(){
             endHours + ':' + endMinutes;
 
         meeting = $(
-            '<a href="' + m.link + '" class="list-group-item">' +
+            '<a href="' + m.url + '" class="list-group-item">' +
             m.name +
             '<br>' + dateString +
             '<i class="fa fa-chevron-right arrow-right"></i></a>'
