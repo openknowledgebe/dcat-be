@@ -9,11 +9,39 @@ $(function(){
         loadMeetings();
     }
 
+    $('.scroll').on('click', function(event) {
+        event.preventDefault();
+        var target = "#" + $(this).data('target');
+        var offs = $(target).offset().top;
+
+        $('html, body').animate({
+            scrollTop: offs
+        }, 700);
+    });
+
     $( '.scrollTop' ).on('click', function(event) {
         event.preventDefault();
         $('body').animate({
             scrollTop: $('body').offset().top
         }, 700);
+    });
+
+    var stickyNavTop = $('#nav').offset().top;
+
+    var stickyNav = function(){
+        var scrollTop = $(window).scrollTop();
+
+        if (scrollTop > stickyNavTop) {
+            $('#nav').addClass('sticky');
+        } else {
+            $('#nav').removeClass('sticky');
+        }
+    };
+
+    stickyNav();
+
+    $(window).scroll(function() {
+        stickyNav();
     });
 
     if(!Modernizr.svg) {
@@ -22,7 +50,7 @@ $(function(){
         });
     }
 
-    $( '.exampleDcat' ).on('click', function(event) {
+    $('.exampleDcat').on('click', function(event) {
         event.preventDefault();
         var that = $(this);
         that.next('i').removeClass('hidden');
@@ -73,7 +101,7 @@ $(function(){
 
     function loadMeetings() {
         $.ajax({
-            url: 'meetings/meetings.json',
+            url: 'meetings.json',
             error: function() {
                 console.log('An error has occurred');
             },

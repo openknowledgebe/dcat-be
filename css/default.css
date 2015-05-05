@@ -132,12 +132,39 @@ p {
 .container .section {
   padding: 1.5em 0; }
 
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0; }
+
+#nav {
+  border-bottom: 2px solid #CFCFCF;
+  background-color: #FFFFFF;
+  box-shadow: #FFFFFF; }
+  #nav ul {
+    padding-left: 0; }
+    #nav ul li {
+      transition: all 0.3s;
+      padding: 0.5em 1.5em;
+      float: left;
+      list-style: none;
+      border-left: 1px solid #CFCFCF; }
+      #nav ul li:last-of-type {
+        border-right: 1px solid #CFCFCF; }
+      #nav ul li:hover {
+        background-color: #EFEFEF;
+        cursor: pointer;
+        cursor: hand; }
+
 #intro {
   position: relative;
   background-color: #2D2D2D;
   color: #7ab800;
   padding-bottom: 20px;
-  padding-top: 90px; }
+  padding-top: 40px; }
   #intro h1 {
     font-size: 3em;
     text-transform: uppercase;

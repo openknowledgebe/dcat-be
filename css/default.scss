@@ -185,12 +185,49 @@ p {
   }
 }
 
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
+
+#nav {
+  border-bottom: 2px solid $color-darkest-white;
+  background-color: $color-white;
+  box-shadow: $color-white;
+
+  ul {
+    padding-left: 0;
+
+    li {
+      transition: all 0.3s;
+      padding: 0.5em 1.5em;
+      float: left;
+      list-style: none;
+      border-left: 1px solid $color-darkest-white;
+
+      &:last-of-type {
+        border-right: 1px solid $color-darkest-white;
+      }
+
+      &:hover {
+        background-color: $color-dark-white;
+        cursor: pointer;
+        cursor: hand;
+      }
+    }
+  }
+}
+
 #intro {
   position: relative;
   background-color: $color-dark-grey;
   color: $color-green;
   padding-bottom: 20px;
-  padding-top: 90px;
+  padding-top: 40px;
 
   h1 {
     font-size: 3em;
