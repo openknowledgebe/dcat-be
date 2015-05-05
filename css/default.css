@@ -158,6 +158,15 @@ p {
         background-color: #EFEFEF;
         cursor: pointer;
         cursor: hand; }
+  @media screen and (max-width: 550px) {
+    #nav ul li:first-of-type {
+      border-left: none; }
+    #nav .container {
+      padding-left: 0;
+      padding-right: 0; }
+      #nav .container .col-xs-12 {
+        padding-left: 0;
+        padding-right: 0; } }
 
 #intro {
   position: relative;

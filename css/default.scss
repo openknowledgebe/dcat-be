@@ -220,7 +220,26 @@ p {
       }
     }
   }
+
+  @media screen and (max-width: 550px) {
+    ul {
+      li:first-of-type {
+        border-left: none;
+      }
+    }
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+
+      .col-xs-12 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
 }
+
+
 
 #intro {
   position: relative;
