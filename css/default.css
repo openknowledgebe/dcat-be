@@ -244,7 +244,10 @@ p {
     max-height: 100px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15px; }
+    margin-top: 15px;
+    opacity: 0.33; }
+    #partners-container .partner-logos img:hover {
+      opacity: 1; }
 
 #footer {
   background-color: #2D2D2D;

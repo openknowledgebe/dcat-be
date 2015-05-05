@@ -368,6 +368,11 @@ p {
       margin-left: auto;
       margin-right: auto;
       margin-top: 15px;
+      opacity: 0.33;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }

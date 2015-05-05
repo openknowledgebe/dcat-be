@@ -1,35 +1,35 @@
 {
   "upcoming": [
     {
-      "startDate": 1410629485228,
-      "endDate": 1410629486228,
-      "name": "Open Data in Belgium",
-      "link": "http://www.doodle.com",
-      "description": "Here you can give a brief overview of what is discussed in the meetings in general, or for the next upcoming meeting. Anything that is relevant can be posted here."
+      "startDate": 1399548600000,
+      "endDate": 1399555800000,
+      "name": "Open Data Portals",
+      "link": "#",
+      "description": "We'll have an open discussion about Open Data Portals. Talk about Open Data Projects, review the DCAT-AP format and do some Thesauri mapping (Eurovoc, ...)"
     }
   ],
   "past": [
     {
-      "startDate": 1410629485228,
-      "endDate": 1410629486228,
+      "startDate": 1423744200000,
+      "endDate":  1423751400000,
       "name": "Open Data Portals",
       "link": "http://belgif.be/meeting/open-data-portals-2015-02"
     },
     {
-      "startDate": 1410629485228,
-      "endDate": 1410629485228,
+      "startDate": 1412841600000,
+      "endDate": 1412848800000,
       "name": "AWG Concertation",
       "link": "http://belgif.be/meeting/awg-concertation-2014-10"
     },
     {
-      "startDate": 1410629485228,
-      "endDate": 1410629485228,
+      "startDate": 1411041600000,
+      "endDate": 1411048800000,
       "name": "Open Data Portals",
       "link": "http://belgif.be/meeting/open-data-portals-2014-09"
     },
     {
-      "startDate": 1410629485228,
-      "endDate": 1410629485228,
+      "startDate": 1403524800000,
+      "endDate": 1403532000000,
       "name": "Open Data Portals",
       "link": "http://belgif.be/meeting/open-data-portals-2014-06"
     }
