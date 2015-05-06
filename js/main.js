@@ -17,7 +17,7 @@ $(function(){
         var offs = $(target).offset().top;
 
         $('html, body').animate({
-            scrollTop: offs
+            scrollTop: offs-60
         }, 700);
     });
 
