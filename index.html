@@ -40,7 +40,7 @@
 
             <div class="col-xs-12 col-xs-offset-0 col-sm-offset-0 col-sm-4 col-md-3 col-md-offset-1">
                 <p class="intro-subscribe">
-                    Subscribe to our mailing list
+                    Join the conversation on our mailinglist:
                 </p>
                 <form method="POST" action="http://lists.okfn.org/mailman/subscribe/dcat-be">
                     <div class="form-group">
@@ -63,7 +63,7 @@
                 <ul>
                     <li class="scrollTop">DCAT-BE</li>
                     <li class="scroll" data-target="getting-started">Getting Started</li>
-                    <li class="scroll" data-target="dcat-example">Examples</li>
+                    <li class="scroll" data-target="dcat-feeds">DCAT-BE feeds</li>
                     <li class="scroll" data-target="partners">Partners</li>
                 </ul>
             </div>
@@ -98,16 +98,18 @@
                     <div class="clearfix"></div>
                         </blockquote>
                     <p>
-                        Basically, DCAT is a way to provide additional information to your data, so called “meta-data”.
-                        By using DCAT, others can easily find and search across all the data you want to publish in order to further develop upon this information. </p>
+                        DCAT is a way to provide context or metadata for your datasets.
+                        By using DCAT, others can easily find and search across all the datasets published in Belgium in a unified way. </p>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <h2>How do I begin?</h2>
+                    <h2>Getting started</h2>
                     <p>
-                        There are different ways to begin organising your data with DCAT. The option we opt for is the Turtle or JSON-LD format.
-                        These formats are very accessible, structured and easy to use. All the meta-data is collected in a separate file, which can be interpreted by a machine in order to process the information.
+                        There are different tools and formats to organise your data with DCAT. The option we show bellow is the Turtle serialisation, yet there are plenty of other options such as RDFa, JSON-LD or RDF/XML.
+                        A couple of links to get you started:
                         <br>The Flemish government has made a guide in which they explain how to work with Open Data, as well as give some examples of DCAT, check it out <a href="http://opendataforum.info/index.php/blog/open-data/287-het-open-data-handboek-van-de-vlaamse-overheid">here</a>.
-                        <br>Another option is to define your DCAT within the HTML of your webpage. The Open Data Institue has an excellent <a href="https://theodi.org/guides/marking-up-your-dataset-with-dcat">guide</a> to get you started with this format.
+                        <br>Another option is to define your DCAT within the HTML of your webpage. The Open Data Institue has an excellent <a href="https://theodi.org/guides/marking-up-your-dataset-with-dcat">guide</a> to get you started.
+                        <br><a href="http://edcat.tenforce.com/" target="_blank">Edcat</a> is an open-source tool created by Tenforce to set up an API to administer your DCAT-AP
+                        <br><a href="http://thedatatank.com/" target="_blank">The DataTank</a> is an open-source data adapter: it transforms machine readable datasets into an HTTP API. It automatically generates a DCAT-AP feed for the datasets included.
                     </p>
                 </div>
                 <div class="col-xs-12">
@@ -116,12 +118,11 @@
                 <div class="col-xs-12 col-md-6">
                     <p>
                         The DCAT-BE standard is derived from the <a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/description">DCAT-AP</a> standard, which in turn is derived from the <a href="http://www.w3.org/TR/vocab-dcat/">W3C DCAT standard</a>.
-                        DCAT-AP is an extension to DCAT adopted by the European Commission. DCAT-AP makes some fields mandatory, recommended and optional compared to DCAT, cfr. the <a href="https://joinup.ec.europa.eu/system/files/project/dcat-ap_4.png">overview image</a>.
+                        DCAT-AP, the European standard, makes some fields mandatory, recommended and optional compared to DCAT. There is <a href="https://joinup.ec.europa.eu/system/files/project/dcat-ap_4.png">an overview image</a> available.
                     </p>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <p>DCAT-BE extends DCAT-AP by adding a theme taxonomy for Belgium and maybe in the future making some other
-                        fields mandatory (which will be discussed and decided upon in meetings)
+                    <p>Currenlty, DCAT-BE extends DCAT-AP by adding a theme taxonomy for Belgium. The themes are still under discussion.
                     </p>
                 </div>
             </div>
@@ -159,14 +160,14 @@
         </div>
     </div>
     <div class="container">
-        <div class="row section" id="dcat-example">
+        <div class="row section" id="dcat-feeds">
             <div class="col-xs-12">
-                <h2>Live Examples</h2>
+                <h2>DCAT-BE Feeds</h2>
             </div>
             <div class="col-xs-12 col-md-8">
                 <p>
-                    There are already several government instances that are using DCAT, but our goal is to convince every data publisher to start using this standard.
-                    <br>Click on the following links to load a section of the dataset to see how it works in live action.
+                    There are already a couple of government instances using DCAT in Belgium. Our goal: make all governments who publish open data use DCAT-BE to annotate their repository.
+                    <br>Click on the following links to load a section of the dataset to see a preview of their data. Follow the links to reuse this data.
                 </p>
                 </div>
             <div class="col-xs-12 col-md-4">
@@ -377,7 +378,7 @@
             </div>
             <div class="col-xs-4 pull-right">
                 <p class="text-right">
-                    Developed by Sandmeert
+                    Developed by Sandmeert and <a href="https://twitter.com/pietercolpaert" target="_blank">@pietercolpaert</a>
                 </p>
             </div>
         </div>
