@@ -139,6 +139,12 @@ blockquote {
     font-style: normal;
     font-size: 0.8em;
   }
+
+  &.tool-block {
+    min-height: 150px;
+    vertical-align: middle;
+    float: none;
+  }
 }
 
 /* =============================
@@ -179,10 +185,8 @@ p {
   line-height: 1.8em;
 }
 
-.container {
-  .section {
-    padding: 1.5em 0;
-  }
+.section {
+  padding: 1.5em 0;
 }
 
 .sticky {
@@ -341,8 +345,21 @@ p {
   }
 }
 
-#basics {
+#tools {
+  .tool {
+    text-align: center;
 
+    .tool-img-wrapper {
+      line-height: 100px;
+
+      img {
+        vertical-align: middle;
+        max-width: 100px;
+        max-height: 100px;
+      }
+    }
+
+  }
 }
 
 .code-example {
@@ -365,6 +382,7 @@ p {
 
 #dcat-example{
   .code-details {
+    text-align: right;
     span {
       font-size: 1.2em;
       font-weight: bold;
@@ -395,6 +413,17 @@ p {
   }
 }
 
+.display-table{
+  display: table;
+  table-layout: fixed;
+}
+
+.display-cell{
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+}
+
 #partners-container {
   background-color: $color-dark-grey;
   color: $color-white;
@@ -403,31 +432,21 @@ p {
     color: $color-green;
   }
 
-  .display-table{
-    display: table;
-    table-layout: fixed;
-  }
-
-  .display-cell{
-    display: table-cell;
-    vertical-align: middle;
-    float: none;
-  }
-
   .partner-logos {
-    img {
-      display: block;
-      max-width: 100%;
-      max-height: 100px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 15px;
-      opacity: 0.33;
+      img {
+        vertical-align: middle;
+        display: block;
+        max-width: 100%;
+        max-height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        opacity: 0.33;
 
-      &:hover {
-        opacity: 1;
+        &:hover {
+          opacity: 1;
+        }
       }
-    }
   }
 }
 
@@ -453,8 +472,18 @@ p {
 
 /* Smartphones */
 @media screen and (min-width: 480px){
-  .code-details {
-    margin-top: -10px;
+  #dcat-example {
+    .code-details {
+      text-align: left;
+
+      span {
+        margin-top: 10px;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+    }
   }
 }
 
@@ -466,8 +495,19 @@ p {
 }
 
 @media screen and (min-width: 992px){
-  .code-details {
-    margin-top: 0px;
+  #dcat-example {
+    .code-details {
+      text-align: left;
+
+      span {
+        margin-top: 10px;
+      }
+
+      p {
+        margin-bottom: 1em;
+      }
+
+    }
   }
 }
 

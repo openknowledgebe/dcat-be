@@ -99,6 +99,10 @@ blockquote {
     margin-right: 1em;
     font-style: normal;
     font-size: 0.8em; }
+  blockquote.tool-block {
+    min-height: 150px;
+    vertical-align: middle;
+    float: none; }
 
 /* =============================
 * STYLES
@@ -129,7 +133,7 @@ a {
 p {
   line-height: 1.8em; }
 
-.container .section {
+.section {
   padding: 1.5em 0; }
 
 .sticky {
@@ -235,6 +239,15 @@ p {
   #getting-started-container #getting-started h2, #getting-started-container #dcat-feeds h2, #dcat-feeds-container #getting-started h2, #dcat-feeds-container #dcat-feeds h2 {
     color: #7ab800; }
 
+#tools .tool {
+  text-align: center; }
+  #tools .tool .tool-img-wrapper {
+    line-height: 100px; }
+    #tools .tool .tool-img-wrapper img {
+      vertical-align: middle;
+      max-width: 100px;
+      max-height: 100px; }
+
 .code-example {
   font-family: "Courier New", Courier, monospace;
   font-size: 0.8em;
@@ -248,11 +261,13 @@ p {
       cursor: pointer;
       cursor: hand; }
 
-#dcat-example .code-details span {
-  font-size: 1.2em;
-  font-weight: bold; }
-#dcat-example .code-details p {
-  margin-bottom: 2em; }
+#dcat-example .code-details {
+  text-align: right; }
+  #dcat-example .code-details span {
+    font-size: 1.2em;
+    font-weight: bold; }
+  #dcat-example .code-details p {
+    margin-bottom: 2em; }
 
 #faq h3 {
   color: #2D2D2D; }
@@ -262,19 +277,22 @@ p {
   #faq p:last-of-type {
     margin-bottom: 0; }
 
+.display-table {
+  display: table;
+  table-layout: fixed; }
+
+.display-cell {
+  display: table-cell;
+  vertical-align: middle;
+  float: none; }
+
 #partners-container {
   background-color: #2D2D2D;
   color: #FFFFFF; }
   #partners-container h2 {
     color: #7ab800; }
-  #partners-container .display-table {
-    display: table;
-    table-layout: fixed; }
-  #partners-container .display-cell {
-    display: table-cell;
-    vertical-align: middle;
-    float: none; }
   #partners-container .partner-logos img {
+    vertical-align: middle;
     display: block;
     max-width: 100%;
     max-height: 100px;
@@ -301,15 +319,23 @@ p {
 * ============================== */
 /* Smartphones */
 @media screen and (min-width: 480px) {
-  .code-details {
-    margin-top: -10px; } }
+  #dcat-example .code-details {
+    text-align: left; }
+    #dcat-example .code-details span {
+      margin-top: 10px; }
+    #dcat-example .code-details p {
+      margin-bottom: 1em; } }
 /* Tablets */
 @media screen and (min-width: 768px) {
   .form-control {
     float: none; } }
 @media screen and (min-width: 992px) {
-  .code-details {
-    margin-top: 0px; } }
+  #dcat-example .code-details {
+    text-align: left; }
+    #dcat-example .code-details span {
+      margin-top: 10px; }
+    #dcat-example .code-details p {
+      margin-bottom: 1em; } }
 .form-control::-webkit-input-placeholder {
   color: #7a7a7a; }
 
