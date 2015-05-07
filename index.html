@@ -28,13 +28,12 @@
 </head>
 <body>
 <div id="page-container">
-
     <div class="row" id="intro">
         <div class="container header-container">
             <div class="col-xs-12 col-sm-8">
                 <h1>DCAT-BE</h1>
                 <h2>Linking data portals across Belgium.</h2>
-                <p class="intro-description">DCAT Belgium is an Application Profile of the <a href="http://www.w3.org/TR/vocab-dcat/" target="_blank">W3C standard</a> to describe open datasets</a></p>
+                <p class="intro-description">DCAT Belgium is an Application Profile of the <a href="http://www.w3.org/TR/vocab-dcat/" target="_blank">W3C standard</a> to describe open datasets</p>
                 <hr class="divider hidden-sm hidden-md hidden-lg">
             </div>
 
@@ -131,7 +130,7 @@
             </div>
             <div class="col-xs-12">
                 <ul>
-                    <li></li>The Flemish government has made a guide in which they explain how to work with Open Data, as well as give some examples of DCAT, check it out <a href="http://opendataforum.info/index.php/blog/open-data/287-het-open-data-handboek-van-de-vlaamse-overheid">here</a>.
+                    <li>The Flemish government has made a guide in which they explain how to work with Open Data, as well as give some examples of DCAT, check it out <a href="http://opendataforum.info/index.php/blog/open-data/287-het-open-data-handboek-van-de-vlaamse-overheid">here</a>.</li>
                     <li>Another option is to define your DCAT within the HTML of your webpage. The Open Data Institue has an excellent <a href="https://theodi.org/guides/marking-up-your-dataset-with-dcat">guide</a> to get you started.
                     <li><a href="http://edcat.tenforce.com/" target="_blank">Edcat</a> is an open-source tool created by Tenforce to set up an API to administer your DCAT-AP
                     <li><a href="http://thedatatank.com/" target="_blank">The DataTank</a> is an open-source data adapter: it transforms machine readable datasets into an HTTP API. It automatically generates a DCAT-AP feed for the datasets included.
@@ -169,44 +168,49 @@
             </div>
         </div>
     </div>
+    <div class="row" id="dcat-feeds-container">
+        <div class="container">
+            <div class="row section" id="dcat-feeds">
+                <div class="col-xs-12">
+                    <h2>DCAT-BE Feeds</h2>
+                </div>
+                <div class="col-xs-12 col-md-8">
+                    <p>
+                        There are already a couple of government instances using DCAT in Belgium. Our goal: make all governments who publish open data use DCAT-BE to annotate their repository.
+                        <br>Click on the following links to load a section of the dataset to see a preview of their data. Follow the links to reuse this data.
+                    </p>
+                    </div>
+                <div class="col-xs-12 col-md-4">
+                    <p>
+                        <a href="http://data.kortrijk.be/api/dcat" class="exampleDcat">DCAT Kortrijk</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                        <br>
+                        <a href="http://demo.thedatatank.com/api/dcat" class="exampleDcat">DCAT TheDataTank demo</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                        <br>
+                        <a href="http://datatank4.gent.be/api/dcat" class="exampleDcat">Metadata Ghent</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                         <br>
+                        <a href="http://datasets.antwerpen.be/v4/api/dcat" class="exampleDcat">Metadata Antwerp</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                        <br>
+                        <a href="http://opendata.bruxelles.be/api/datasets/1.0/search?format=rdf&rows=-1" class="exampleDcat">Metadata Brussels</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                    </p>
+                </div>
+                <div class="col-xs-12" id="live-example">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="live-example-title">
+
+                        </div>
+                        <div class="panel-body code-example" id="live-example-code">
+                            <p></p>
+                        </div>
+                        <div class="panel-footer" id="live-example-footer">
+                            <a href="">Click here for the full set</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
-        <div class="row section" id="dcat-feeds">
-            <div class="col-xs-12">
-                <h2>DCAT-BE Feeds</h2>
-            </div>
-            <div class="col-xs-12 col-md-8">
-                <p>
-                    There are already a couple of government instances using DCAT in Belgium. Our goal: make all governments who publish open data use DCAT-BE to annotate their repository.
-                    <br>Click on the following links to load a section of the dataset to see a preview of their data. Follow the links to reuse this data.
-                </p>
-                </div>
-            <div class="col-xs-12 col-md-4">
-                <p>
-                    <a href="http://data.kortrijk.be/api/dcat" class="exampleDcat">DCAT Kortrijk</a> <i class="fa fa-spinner fa-spin hidden green"></i>
-                    <br>
-                    <a href="http://demo.thedatatank.com/api/dcat" class="exampleDcat">DCAT TheDataTank demo</a> <i class="fa fa-spinner fa-spin hidden green"></i>
-                    <br>
-                    <a href="http://datatank4.gent.be/api/dcat" class="exampleDcat">Metadata Ghent</a> <i class="fa fa-spinner fa-spin hidden green"></i>
-                     <br>
-                    <a href="http://datasets.antwerpen.be/v4/api/dcat" class="exampleDcat">Metadata Antwerp</a> <i class="fa fa-spinner fa-spin hidden green"></i>
-                    <br>
-                    <a href="http://opendata.bruxelles.be/api/datasets/1.0/search?format=rdf&rows=-1" class="exampleDcat">Metadata Brussels</a> <i class="fa fa-spinner fa-spin hidden green"></i>
-                </p>
-            </div>
-            <div class="col-xs-12" id="live-example">
-                <div class="panel panel-default">
-                    <div class="panel-heading" id="live-example-title">
-
-                    </div>
-                    <div class="panel-body code-example" id="live-example-code">
-                        <p></p>
-                    </div>
-                    <div class="panel-footer" id="live-example-footer">
-                        <a href="">Click here for the full set</a>
-                    </div>
-                </div>
-            </div>
-
+        <div class="row section" id="dcat-example">
             <!-- dcat:Catalog example -->
             <div class="col-xs-12">
                 <h2>More into detail</h2>
@@ -311,6 +315,7 @@
             </div>
 
         </div>
+    </div>
 
         <!--
         <div class="row section" id="validate">
@@ -342,7 +347,6 @@
                 </div>
         </div>
         -->
-    </div>
     <div class="row" id="partners-container">
         <div class="container section" id="partners">
             <div class="col-xs-12">

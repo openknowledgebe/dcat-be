@@ -329,12 +329,12 @@ p {
   }
 }
 
-#getting-started-container {
+#getting-started-container, #dcat-feeds-container {
   background-color: $color-dark-white;
   border-top: 2px dashed $color-darkest-white;
   border-bottom: 2px dashed $color-darkest-white;
 
-  #getting-started {
+  #getting-started, #dcat-feeds {
     h2 {
       color:$color-green;
     }
@@ -364,8 +364,6 @@ p {
 }
 
 #dcat-example{
-
-
   .code-details {
     span {
       font-size: 1.2em;

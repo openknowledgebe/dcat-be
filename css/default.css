@@ -228,11 +228,11 @@ p {
         right: 1em;
         color: #7ab800; }
 
-#getting-started-container {
+#getting-started-container, #dcat-feeds-container {
   background-color: #EFEFEF;
   border-top: 2px dashed #CFCFCF;
   border-bottom: 2px dashed #CFCFCF; }
-  #getting-started-container #getting-started h2 {
+  #getting-started-container #getting-started h2, #getting-started-container #dcat-feeds h2, #dcat-feeds-container #getting-started h2, #dcat-feeds-container #dcat-feeds h2 {
     color: #7ab800; }
 
 .code-example {
