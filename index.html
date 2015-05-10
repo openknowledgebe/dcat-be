@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DCAT-BE</title>
+    <meta name="description" content="The Belgian standard for Open Data Catalogs (DCAT-BE)">
+    <meta name="keywords" content="dcat, open, knowledge, Ghent">
+    <meta name="author" content="Open Knowledge Belgium">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="DCAT-BE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://dcat.be" />
+    <meta property="og:image" content="http://dcat.be/images/logo.png" />
+    <meta property="og:description" content="DCAT-BE is an Application Profile of the W3C standard to describe open datasets called DCAT" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@OpenKnowledgeBE">
+    <meta name="twitter:title" content="DCAT-BE">
+    <meta name="twitter:description" content="DCAT-BE is an Application Profile of the W3C standard to describe open datasets called DCAT">
+    <meta name="twitter:image" content="http://dcat.be/images/logo.png" />
+    <meta name="twitter:url" content="http://dcat.be/" />
+    <script language="application/ld+json" src="meetings-ld.json"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<div id="page-container">
+    <div class="row" id="intro">
+        <div class="container header-container">
+            <div class="col-xs-12 col-sm-8">
+                <h1>DCAT-BE</h1>
+                <h2>Linking data portals across Belgium.</h2>
+                <p class="intro-description">DCAT Belgium is an Application Profile of the <a href="http://www.w3.org/TR/vocab-dcat/" target="_blank">W3C standard</a> to describe open datasets</p>
+                <hr class="divider hidden-sm hidden-md hidden-lg">
+            </div>
+
+            <div class="col-xs-12 col-xs-offset-0 col-sm-offset-0 col-sm-4 col-md-3 col-md-offset-1">
+                <p class="intro-subscribe">
+                    Join the conversation on our mailinglist:
+                </p>
+                <form method="POST" action="http://lists.okfn.org/mailman/subscribe/dcat-be">
+                    <div class="form-group">
+                        <label class="sr-only" for="fullname">Name</label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label class="sr-only" for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="E-mail Adress">
+                    </div>
+                    <div class="clearfix"></div>
+                    <button type="submit" name="email-button" class="btn btn-default">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="nav">
+        <div class="container">
+            <div class="col-xs-12">
+                <ul>
+                    <li class="scrollTop">DCAT-BE</li>
+                    <li class="scroll" data-target="tools">Tools and resources</li>
+                    <li class="scroll" data-target="dcat-feeds">DCAT-BE feeds</li>
+                    <li class="scroll" data-target="partners">Partners</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row section" id="meeting">
+            <div class="col-xs-12 col-md-6">
+                <h2>Upcoming meeting</h2>
+                <p id="upcoming-meeting-desc"></p>
+                <div class="list-group" id="upcoming-meeting">
+
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h2>Previous meetings</h2>
+                <div class="list-group" id="past-meetings">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" id="getting-started-container">
+        <div class="container" >
+            <div class="row section" id="getting-started">
+                <div class="col-xs-12 col-md-6">
+                    <h2>What is DCAT?</h2>
+
+                    <blockquote>
+                        “DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web”
+                        <br><span class="quote-author">- W3C</span>
+                        <div class="clearfix"></div>
+                    </blockquote>
+                    <p>
+                        DCAT is a way to provide context or metadata for your datasets.
+                        By using DCAT, others can easily find and search across all the datasets published in Belgium in a unified way.</p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <h2>DCAT-BE</h2>
+                    <p>
+                    The DCAT-BE standard is derived from the <a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/description">DCAT-AP</a> standard, which in turn is derived from the <a href="http://www.w3.org/TR/vocab-dcat/">W3C DCAT standard</a>.
+                    DCAT-AP, the European standard, makes some fields mandatory, recommended and optional compared to DCAT. There is <a href="https://joinup.ec.europa.eu/system/files/project/dcat-ap_4.png">an overview image</a> available.
+                    </p>
+                    <p>Currently, DCAT-BE extends DCAT-AP by adding a theme taxonomy for Belgium. The themes are still under discussion.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row section" id="tools">
+            <div class="col-xs-12">
+                <h2>Tools and resources</h2>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-md-3 tool">
+                    <div class="tool-img-wrapper"><a href="http://edcat.tenforce.com/" target="_blank"><img src="images/tools/edcat_b.png"></a></div>
+                    <br><a href="http://edcat.tenforce.com/" target="_blank">Edcat</a> is an open-source tool created by Tenforce to set up an API to administer your DCAT-AP.
+                </div>
+                <div class="col-xs-6 col-md-3 tool">
+                    <div class="tool-img-wrapper"><a href="http://thedatatank.com/" target="_blank"><img src="images/tools/tdt_b.png"></a></div>
+                    <br><a href="http://thedatatank.com/" target="_blank">The DataTank</a> is an open-source data adapter: it transforms machine readable datasets into an HTTP API. It automatically generates a DCAT-AP feed for the datasets included.
+                </div>
+                <div class="col-xs-6 col-md-3 tool">
+                    <div class="tool-img-wrapper"><a href="http://opendataforum.info/index.php/blog/open-data/287-het-open-data-handboek-van-de-vlaamse-overheid"><img src="images/tools/logovl_b.png"></a></div>
+                    <br>The Flemish government has made a guide in which they explain how to work with Open Data, as well as give some examples of DCAT, check it out <a href="http://opendataforum.info/index.php/blog/open-data/287-het-open-data-handboek-van-de-vlaamse-overheid">here</a>.
+                </div>
+                <div class="col-xs-6 col-md-3 tool">
+                    <div class="tool-img-wrapper"><a href="https://theodi.org/guides/marking-up-your-dataset-with-dcat"><img src="images/tools/rdfa_b.png"></a></div>
+                    <br>Another option is to define your DCAT within the HTML of your webpage. The Open Data Institue has an excellent <a href="https://theodi.org/guides/marking-up-your-dataset-with-dcat">guide</a> to get you started.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row" id="dcat-feeds-container">
+        <div class="container">
+            <div class="row section" id="dcat-feeds">
+                <div class="col-xs-12">
+                    <h2>DCAT-BE Feeds</h2>
+                </div>
+                <div class="col-xs-12 col-md-8">
+                    <p>
+                        There are already a couple of government instances using DCAT in Belgium. Our goal: make all governments who publish open data use DCAT-BE to annotate their repository.
+                        <br>Click on the following links to load a section of the dataset to see a preview of their data. Follow the links to reuse this data.
+                    </p>
+                    </div>
+                <div class="col-xs-12 col-md-4">
+                    <p>
+                        <a href="http://data.kortrijk.be/api/dcat" class="exampleDcat">DCAT Kortrijk</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                        <br>
+                        <a href="http://demo.thedatatank.com/api/dcat" class="exampleDcat">DCAT TheDataTank demo</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                        <br>
+                        <a href="http://datatank4.gent.be/api/dcat" class="exampleDcat">Metadata Ghent</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                         <br>
+                        <a href="http://datasets.antwerpen.be/v4/api/dcat" class="exampleDcat">Metadata Antwerp</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                        <br>
+                        <a href="http://opendata.bruxelles.be/api/datasets/1.0/search?format=rdf&rows=-1" class="exampleDcat">Metadata Brussels</a> <i class="fa fa-spinner fa-spin hidden green"></i>
+                    </p>
+                </div>
+                <div class="col-xs-12" id="live-example">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" id="live-example-title">
+
+                        </div>
+                        <div class="panel-body code-example" id="live-example-code">
+                            <p></p>
+                        </div>
+                        <div class="panel-footer" id="live-example-footer">
+                            <a href="">Click here for the full set</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row section" id="basics">
+            <div class="col-xs-12">
+                <h2>The basics</h2>
+            </div>
+            <div class="col-xs-12">
+                <p>
+                    DCAT describes datasets on 3 different levels. The Catalog, the Dataset and the Distribution level. Each level contains information, meta-data, about itself, such as the title, description, and so on. Furthermore, the upper layers contains URI references to its children, which means it’s easy to cross-reference all of the data.
+                </p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h3>dcat:Catalog</h3>
+                <p>
+                    The Catalog is the upper level in the DCAT standard. It contains a description of itself, such as the title, description, publisher and licenses. It also contains references to the different Datasets which can be found within this particular Data Catalog.
+                </p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h3>dcat:Dataset</h3>
+                <p>
+                    The Dataset contains information about the individual Dataset, such as the author, which category the dataset belongs to, geographical information, and so on. It also has references to all the different Distribution methods of this particular dataset.
+                </p>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <h3>dcat:Distribution</h3>
+                <p>
+                    This is the deepest level of the DCAT standard. At this level we define the access URL for the data, type (CSV, JSON, …), license, size, download URL, and so on.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row section" id="dcat-example">
+            <!-- dcat:Catalog example -->
+            <div class="col-xs-12">
+                <h2>More into detail</h2>
+            </div>
+
+            <div class="col-xs-12 col-md-4 code-details">
+                <h3>Prefixes / Aliases</h3>
+                <p>In this section we define the prefixes, or aliases, which we will use throughout the DCAT file. These
+                are just shorthands for various DCAT fields to make our life easier.</p>
+            </div>
+
+            <div class="col-xs-12 col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Prefix section
+                    </div>
+                    <div class="panel-body code-example">
+                        <p>@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+    @prefix dc: &lt;http://purl.org/dc/terms/&gt; .
+    @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
+    @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- dcat:Publisher example -->
+            <div class="col-xs-12 col-md-4 code-details">
+                <h3>The Data Catalog</h3>
+                <p>In the next section we define our Data Catalog. Here we give our catalog a title, description, language,
+                    license, and so on. These fields are all defined on the various websites we declared earlier in our
+                    prefix section. We also reference all of the Datasets that are included in this catalog.</p>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        TheDataTank example Catalog
+                    </div>
+                    <div class="panel-body code-example">
+                        <p>&lt;http://demo.thedatatank.com/api/dcat&gt;
+    a dcat:Catalog ;
+    dc:title "The DataTank Demo" ;
+    dc:description "A demo catalog of datasets published by The DataTank." ;
+    dc:issued "2013-12-04T09:35:15+0000" ;
+    dc:language &lt;http://lexvo.org/id/iso639-3/eng&gt; ;
+    foaf:homepage &lt;http://demo.thedatatank.com&gt; ;
+    dc:license &lt;http://www.opendefinition.org/licenses/cc-zero&gt; ;
+    dc:publisher &lt;http://thedatatank.com/#organization&gt; ;
+    dc:modified "2015-05-04T16:04:28+0000" ;
+    dcat:dataset &lt;http://demo.thedatatank.com/csv/geo&gt;, &lt;http://demo.thedatatank.com/json/crime&gt; .</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- dcat:Dataset example -->
+            <div class="col-xs-12 col-md-4 code-details">
+                <h3>The Dataset</h3>
+                <p>
+                    Similar to the Data Catalog, we define the title, description, language, and so on of a single Dataset.
+                    Again we make use of the prefixes which we defined earlier. The big difference here is that we link to the
+                    "dcat:distribution"-layer. This is the layer where our actual data is linked to, so it's very important for DCAT.
+                </p>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                       TheDataTank example Dataset
+                    </div>
+                    <div class="panel-body code-example">
+                        <p>&lt;http://demo.thedatatank.com/csv/geo&gt;
+    a dcat:Dataset ;
+    dc:title "Provinces and districts in Afghanistan" ;
+    dc:description "Geographical data about Afghanistan concerning provinces and districts." ;
+    dc:identifier "csv/geo" ;
+    dc:issued "2013-12-04T09:35:22+0000" ;
+    dc:modified "2015-01-27T16:02:41+0000" ;
+    dc:language &lt;http://lexvo.org/id/iso639-3/ara&gt; ;
+    dc:theme &lt;http://ns.thedatatank.com/dcat/themes#Government&gt; ;
+    dcat:distribution &lt;http://demo.thedatatank.com/csv/geo.json&gt; .</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- dcat:Distribution example -->
+            <div class="col-xs-12 col-md-4 code-details">
+                <h3>The Distribution</h3>
+                <p>
+                    In this relative small layer, we make a link to the actual dataset which we might want to find certain data in.
+                    We define the type of data (JSON, XML, ...), the license and most important, where we can find the dataset.
+                </p>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        TheDataTank example Distribution
+                    </div>
+                    <div class="panel-body code-example">
+                        <p>&lt;http://demo.thedatatank.com/csv/geo.json&gt;
+    a dcat:Distribution ;
+    dc:description "A json feed of http://demo.thedatatank.com/csv/geo" ;
+    dc:mediaType "application/json" ;
+    dc:license &lt;http://www.opendefinition.org/licenses/gfdl&gt; .</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--
+        <div class="row section" id="validate">
+            <div class="col-xs-12">
+                <h2>Validate your DCAT-file</h2>
+                <p>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Validate</button>
+                </p>
+            </div>
+        </div>
+        -->
+        <!--
+        <div class="row section" id="faq">
+                <div class="col-xs-12">
+                    <h2>FAQ</h2>
+
+                    <h3>Why are we alive?</h3>
+                    <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+
+                    <h3>Why use DCAT?</h3>
+                    <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+
+                    <h3>What's in the future?</h3>
+                    <p>"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+
+                </div>
+        </div>
+        -->
+    <div class="row" id="partners-container">
+        <div class="container section" id="partners">
+            <div class="col-xs-12">
+                <h2>Partners</h2>
+            </div>
+            <div class="row partner-logos">
+                <div class="col-xs-4">
+                    <a href="http://www.openknowledge.be/" target="_blank"><img src="images/partners/okb.png" alt="Open Knowledge Belgium" title="Open Knowledge Belgium"></a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="http://www.fedict.belgium.be/" target="_blank"><img src="images/partners/fedict_l.png" alt="Fedict" title="Fedict"></a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="http://www.flanders.be/en" target="_blank"><img src="images/partners/flanders_l.png" alt="Flanders" title="Flanders"></a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="http://www.proxml.be/" target="_blank"><img src="images/partners/proxm_l.png" alt="ProXML" title="ProXML"></a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="https://www.iminds.be/" target="_blank"><img src="images/partners/imind_l.png" alt="iMinds" title="iMinds"></a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="http://multimedialab.elis.ugent.be/" target="_blank"><img src="images/partners/mmlab_l.png" alt="MMLab" title="MMLab"></a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="http://www.tenforce.com/" target="_blank"><img src="images/partners/tenforce_l.png" alt="Tenforce" title="Tenforce"></a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="http://weopendata.com/" target="_blank"><img src="images/partners/weopendata_l.png" alt="We Open Data" title="We Open Data"></a>
+                </div>
+                <div class="col-xs-4">
+                    <a href="http://welcome.hp.com/" target="_blank"><img src="images/partners/hp_l.png" alt="HP" title="HP"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="row" id="footer">
+        <div class="container">
+            <div class="col-xs-8">
+                <p>
+                    Powered by OpenKnowledgeBE. Source code freely available on <a href="https://github.com/openknowledgebe/dcat-be" title="DCAT GitHub">GitHub</a>
+                </p>
+            </div>
+            <div class="col-xs-4 pull-right">
+                <p class="text-right">
+                    Developed by Sandmeert and <a href="https://twitter.com/pietercolpaert" target="_blank">@pietercolpaert</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
