@@ -123,8 +123,10 @@ $(function(){
 
         $.each(events, function(i, v) {
             var evDate = new Date(v.startDate);
+            var newMeeting = false;
 
             if(evDate > now) {
+                newMeeting = true;
                 // Event in the future
                 if(v.description && v.description.length > 0) {
                     $('#upcoming-meeting-desc').html(v.description);
@@ -132,10 +134,7 @@ $(function(){
                     $('#upcoming-meeting-desc').html('');
                 }
 
-                if(!v.startDate || !v.name) {
-                    $('#upcoming-meeting').html('');
-                    $('#upcoming-meeting-desc').html('Currently there are no meetings planned in the near future.');
-                } else {
+                if(v.startDate && v.name) {
                     var t = parseEvent(v);
                     $('#upcoming-meeting').html(t);
                 }
@@ -146,6 +145,11 @@ $(function(){
                     $('#past-meetings').append(t);
                 }
                 countPast++;
+            }
+
+            if(!newMeeting) {
+                $('#upcoming-meeting').html('');
+                $('#upcoming-meeting-desc').html('Currently there are no meetings planned in the near future.');
             }
 
         });
