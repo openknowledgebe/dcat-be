@@ -151,7 +151,7 @@ p {
   #nav ul {
     padding-left: 0; }
     #nav ul li {
-      transition: all 0.3s;
+      transition: background 0.3s;
       padding: 0.5em 1.5em;
       float: left;
       list-style: none;
@@ -162,9 +162,11 @@ p {
         background-color: #EFEFEF;
         cursor: pointer;
         cursor: hand; }
-  @media screen and (max-width: 550px) {
-    #nav ul li:first-of-type {
-      border-left: none; }
+  @media screen and (max-width: 650px) {
+    #nav ul li {
+      padding: 0.5em 0.5em; }
+      #nav ul li:first-of-type {
+        border-left: none; }
     #nav .container {
       padding-left: 0;
       padding-right: 0; }
