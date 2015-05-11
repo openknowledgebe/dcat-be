@@ -9,6 +9,7 @@ $(function(){
     function init() {
         $('#live-example').hide();
         loadMeetings();
+        loadCatalogs();
     }
 
     $('.scroll').on('click', function(event) {
@@ -51,13 +52,6 @@ $(function(){
             return $(this).attr('src').replace('.svg', '.png');
         });
     }
-
-    $('.exampleDcat').on('click', function(event) {
-        event.preventDefault();
-        var that = $(this);
-        that.next('i').removeClass('hidden');
-        getExample(that);
-    });
 
     function getExample(that) {
         var url = that.attr('href');
@@ -191,5 +185,40 @@ $(function(){
         );
 
         return meeting;
+    }
+
+    function loadCatalogs() {
+        $.ajax({
+            url: 'catalogs-ld.json',
+            error: function() {
+                console.log('An error has occurred');
+            },
+            success: function(data) {
+                parseCatalogs(data.catalogs);
+            },
+            type: 'GET',
+            cache: false
+        });
+    }
+
+    function parseCatalogs(catalogs) {
+        var cats = $('#catalog-list');
+
+        $.each(catalogs, function(i, v) {
+            var cat = $(
+                '<a href="' + v['@id'] + '" class="exampleDcat">' +
+                v.title +
+                '</a>  <i class="fa fa-spinner fa-pulse hidden green"></i><br>'
+            );
+
+            cats.append(cat);
+        });
+
+        $('.exampleDcat').on('click', function(event) {
+            event.preventDefault();
+            var that = $(this);
+            that.next('i').removeClass('hidden');
+            getExample(that);
+        });
     }
 });
