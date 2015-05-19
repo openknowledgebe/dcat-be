@@ -221,11 +221,21 @@ p {
     color: #2D2D2D;
     border-color: #CFCFCF;
     transition: all 0.2s; }
+    #meeting .list-group .list-group-item a, #meeting .list-group .list-group-item a:active, #meeting .list-group .list-group-item a:hover, #meeting .list-group .list-group-item a:focus {
+      color: #2D2D2D;
+      text-decoration: none; }
     #meeting .list-group .list-group-item .arrow-right {
       position: absolute;
       top: 1.5em;
       right: 1.5em;
       transition: all 0.3s; }
+    #meeting .list-group .list-group-item .minute {
+      position: absolute;
+      top: 1.5em;
+      right: 3.5em;
+      transition: all 0.3s; }
+      #meeting .list-group .list-group-item .minute .minute-link:hover {
+        color: #7ab800; }
     #meeting .list-group .list-group-item:hover {
       background-color: #EFEFEF; }
       #meeting .list-group .list-group-item:hover .arrow-right {

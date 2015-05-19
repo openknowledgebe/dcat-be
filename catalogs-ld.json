@@ -1,0 +1,37 @@
+{
+  "@context": {
+
+  },
+  "catalogs": [
+    {
+      "@id": "http://data.kortrijk.be/api/dcat",
+      "@type": "http://www.w3.org/ns/dcat#Catalog",
+      "description": "A catalog of datasets published by The DataTank.",
+      "title": "Data Catalog of Kortrijk"
+    },
+    {
+      "@id": "http://demo.thedatatank.com/api/dcat",
+      "@type": "http://www.w3.org/ns/dcat#Catalog",
+      "description": "A catalog of datasets published by The DataTank.",
+      "title": "Demo Data Catalog of TheDataTank"
+    },
+    {
+      "@id": "http://datatank4.gent.be/api/dcat",
+      "@type": "http://www.w3.org/ns/dcat#Catalog",
+      "description": "A catalog of datasets published by The DataTank.",
+      "title": "Data Catalog of Ghent"
+    },
+    {
+      "@id": "http://datasets.antwerpen.be/v4/api/dcat",
+      "@type": "http://www.w3.org/ns/dcat#Catalog",
+      "description": "A catalog of datasets published by The DataTank.",
+      "title": "Data Catalog of Antwerp"
+    },
+    {
+      "@id": "http://opendata.bruxelles.be/api/datasets/1.0/search?format=rdf&rows=-1",
+      "@type": "http://www.w3.org/ns/dcat#Catalog",
+      "description": "A catalog of datasets published by The DataTank.",
+      "title": "Data Catalog of Brussels"
+    }
+  ]
+}

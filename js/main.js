@@ -9,6 +9,7 @@ $(function(){
     function init() {
         $('#live-example').hide();
         loadMeetings();
+        loadCatalogs();
     }
 
     $('.scroll').on('click', function(event) {
@@ -51,13 +52,6 @@ $(function(){
             return $(this).attr('src').replace('.svg', '.png');
         });
     }
-
-    $('.exampleDcat').on('click', function(event) {
-        event.preventDefault();
-        var that = $(this);
-        that.next('i').removeClass('hidden');
-        getExample(that);
-    });
 
     function getExample(that) {
         var url = that.attr('href');
@@ -177,19 +171,68 @@ $(function(){
         var hours = ('0'+date.getHours()).slice(-2);
         var endHours = ('0'+enddate.getHours()).slice(-2);
 
+        // Construct date string
         var dateString = weekday[date.getDay()] + ', ' +
             day + '/' + month +
             '/' + date.getFullYear() + ' - ' +
             hours + ':' + minutes + ' - ' +
             endHours + ':' + endMinutes;
 
+        // Identify minutes, if any
+        var minute = '';
+
+        if(m['minute-nl'] && m['minute-nl'].length > 0) {
+            minute += '<a href="' + m['minute-nl'] + '" class="minute-link"><i class="fa fa-file-pdf-o"></i> nl</a>';
+        }
+
+        if(m['minute-fr'] && m['minute-fr'].length > 0) {
+            minute += ' <a href="' + m['minute-fr'] + '" class="minute-link"><i class="fa fa-file-pdf-o"></i> fr</a>';
+        }
+
+        // Construct new meeting element
         meeting = $(
-            '<a href="' + m.url + '" class="list-group-item">' +
-            m.name +
-            '<br>' + dateString +
-            '<i class="fa fa-chevron-right arrow-right"></i></a>'
+            '<div class="list-group-item"><a href="' + m.url + '">' +
+            m.name + '</a>' +
+            '<span class="minute">' + minute + '</span>' +
+            '<br><a href="' + m.url + '">' + dateString +
+            '<i class="fa fa-chevron-right arrow-right"></i></a></div>'
         );
 
         return meeting;
+    }
+
+    function loadCatalogs() {
+        $.ajax({
+            url: 'catalogs-ld.json',
+            error: function() {
+                console.log('An error has occurred');
+            },
+            success: function(data) {
+                parseCatalogs(data.catalogs);
+            },
+            type: 'GET',
+            cache: false
+        });
+    }
+
+    function parseCatalogs(catalogs) {
+        var cats = $('#catalog-list');
+
+        $.each(catalogs, function(i, v) {
+            var cat = $(
+                '<a href="' + v['@id'] + '" class="exampleDcat">' +
+                v.title +
+                '</a>  <i class="fa fa-spinner fa-pulse hidden green"></i><br>'
+            );
+
+            cats.append(cat);
+        });
+
+        $('.exampleDcat').on('click', function(event) {
+            event.preventDefault();
+            var that = $(this);
+            that.next('i').removeClass('hidden');
+            getExample(that);
+        });
     }
 });

@@ -316,11 +316,27 @@ p {
       border-color: $color-darkest-white;
       transition: all 0.2s;
 
+      a, a:active, a:hover, a:focus {
+        color: $color-dark-grey;
+        text-decoration: none;
+      }
+
       .arrow-right {
         position: absolute;
         top: 1.5em;
         right: 1.5em;
         transition: all 0.3s;
+      }
+
+      .minute {
+        position: absolute;
+        top: 1.5em;
+        right: 3.5em;
+        transition: all 0.3s;
+
+        .minute-link:hover {
+          color: $color-green;
+        }
       }
 
       &:hover {
