@@ -259,6 +259,12 @@ p {
       vertical-align: middle;
       max-width: 100px;
       max-height: 100px; }
+    /* Code by Stan Callewaert */
+    #tools .tool:nth-child(5) {
+      clear: left;
+      margin-top: 1em; }
+    #tools .tool:nth-child(6) {
+      margin-top: 1em; }
 
 .code-example {
   font-family: "Courier New", Courier, monospace;
@@ -347,7 +353,10 @@ p {
     #dcat-example .code-details span {
       margin-top: 10px; }
     #dcat-example .code-details p {
-      margin-bottom: 1em; } }
+      margin-bottom: 1em; } 
+    /* Code by Stan Callewaert */
+    #tools .tool:nth-child(5) {
+      margin-left: 230px; } }
 .form-control::-webkit-input-placeholder {
   color: #7a7a7a; }
 
