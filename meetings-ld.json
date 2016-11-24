@@ -11,7 +11,7 @@
       "startDate": "2014-06-23T14:00",
       "endDate": "2014-06-23T16:00",
       "organizer": {"@id": "https://opencorporates.com/id/companies/be/0845419930"},
-      "url": "http://belgif.be/meeting/open-data-portals-2014-06",
+      "url": "http://data.gov.be/nl/dcat-werkgroep",
       "location": {
         "@type": "Place",
         "name": "Vlaanderen BZ",
@@ -22,8 +22,8 @@
           "streetAddress": "Boudewijnlaan 30"
         }
       },
-      "minute-nl":"http://belgif.be/sites/5031.fedimbo.belgium.be/files/opendataportals_201406_nl.pdf",
-      "minute-fr":"http://belgif.be/sites/5031.fedimbo.belgium.be/files/opendataportals_201406_fr.pdf"
+      "minute-nl":"http://www.belgif.be/files/opendataportals_201406_nl.pdf",
+      "minute-fr":"http://www.belgif.be/files/opendataportals_201406_fr.pdf"
     },
     {
       "@type" : "Event",
@@ -31,7 +31,7 @@
       "startDate" : "2014-09-18T14:00",
       "endDate" : "2014-09-18T16:00",
       "organizer" :{ "@id": "https://opencorporates.com/id/companies/be/0845419930"},
-      "url": "http://belgif.be/meeting/open-data-portals-2014-09",
+      "url": "http://data.gov.be/nl/dcat-werkgroep",
       "location" : {
         "@type" : "Place",
         "name" : "DAV",
@@ -42,8 +42,8 @@
           "streetAddress": "Hertogstraat 4"
         }
       },
-      "minute-nl":" http://belgif.be/sites/5031.fedimbo.belgium.be/files/opendataportals_201409_nl.pdf",
-      "minute-fr":"http://belgif.be/sites/5031.fedimbo.belgium.be/files/opendataportals_201409_fr.pdf"
+      "minute-nl":" http://www.belgif.be/files/opendataportals_201409_nl.pdf",
+      "minute-fr":"http://www.belgif.be/files/opendataportals_201409_fr.pdf"
     },
     {
       "@type" : "Event",
@@ -51,7 +51,7 @@
       "startDate" : "2015-02-12T13:30",
       "endDate" : "2015-02-12T15:30",
       "organizer" :{ "@id": "https://opencorporates.com/id/companies/be/0845419930"},
-      "url": "http://belgif.be/meeting/open-data-portals-2014-06",
+      "url": "http://data.gov.be/nl/dcat-werkgroep",
       "location" : {
         "@type" : "Place",
         "name" : "Vlaanderen BZ",
@@ -62,8 +62,8 @@
           "streetAddress": "Boudewijnlaan 30"
         }
       },
-      "minute-nl":"http://www.belgif.be/sites/5031.fedimbo.belgium.be/files/opendataportals_201406_nl.pdf",
-      "minute-fr":"http://www.belgif.be/sites/5031.fedimbo.belgium.be/files/opendataportals_201406_fr.pdf"
+      "minute-nl":"http://www.belgif.be/files/opendataportals_201406_nl.pdf",
+      "minute-fr":"http://www.belgif.be/files/opendataportals_201406_fr.pdf"
     },
     {
       "@type" : "Event",
@@ -71,7 +71,7 @@
       "startDate" : "2015-05-08T13:30",
       "endDate" : "2015-05-08T16:00",
       "organizer" :{ "@id": "https://opencorporates.com/id/companies/be/0845419930"},
-      "url": "http://belgif.be/meeting/open-data-portals-2015-05",
+      "url": "http://data.gov.be/nl/dcat-werkgroep",
       "location" : {
         "@type" : "Place",
         "name" : "GIAL vzw",
@@ -82,8 +82,8 @@
           "streetAddress": "Emile Jacqmainlaan 95"
         }
       },
-      "minute-nl":"http://www.belgif.be/sites/5031.fedimbo.belgium.be/files/opendataportals_201505_nl.pdf",
-      "minute-fr":"http://www.belgif.be/sites/5031.fedimbo.belgium.be/files/opendataportals_201505_fr.pdf"
+      "minute-nl":"http://www.belgif.be/files/opendataportals_201505_nl.pdf",
+      "minute-fr":"http://www.belgif.be/files/opendataportals_201505_fr.pdf"
     },
     {
       "@type" : "Event",
@@ -91,7 +91,7 @@
       "startDate" : "2015-09-29T10:30",
       "endDate" : "2015-09-29T12:00",
       "organizer" :{ "@id": "https://opencorporates.com/id/companies/be/0845419930"},
-      "url": "http://belgif.be/meeting/open-data-portals-2015-09",
+      "url": "http://data.gov.be/nl/dcat-werkgroep",
       "location" : {
         "@type" : "Place",
         "name" : "Fedict",
@@ -102,8 +102,48 @@
           "streetAddress": "Simon Bolivarlaan 30"
         }
       },
-      "minute-nl":"http://www.belgif.be/sites/5031.fedimbo.belgium.be/files/opendataportals_201509_nl.pdf",
-      "minute-fr":"http://www.belgif.be/sites/5031.fedimbo.belgium.be/files/opendataportals_201509_fr.pdf"
+      "minute-nl":"http://www.belgif.be/files/opendataportals_201509_nl.pdf",
+      "minute-fr":"http://www.belgif.be/files/opendataportals_201509_fr.pdf"
+    },
+    {
+      "@type" : "Event",
+      "name" : "Open Data Portals",
+      "startDate" : "2016-10-03T14:00",
+      "endDate" : "2016-10-03T16:30",
+      "organizer" :{ "@id": "https://opencorporates.com/id/companies/be/0845419930"},
+      "url": "http://data.gov.be/nl/dcat-werkgroep",
+      "location" : {
+        "@type" : "Place",
+        "name" : "Informatie Vlaanderen",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brussels",
+          "postalCode": "1000",
+          "streetAddress": "Boudewijnlaan 30"
+        }
+      },
+      "minute-nl":"http://www.belgif.be/files/opendataportals_201603_nl.pdf",
+      "minute-fr":"http://www.belgif.be/files/opendataportals_201603_fr.pdf"
+    },
+    {
+      "@type" : "Event",
+      "name" : "Open Data Portals",
+      "startDate" : "2016-10-03T10:00",
+      "endDate" : "2016-10-03T12:00",
+      "organizer" :{ "@id": "https://opencorporates.com/id/companies/be/0845419930"},
+      "url": "http://data.gov.be/nl/dcat-werkgroep",
+      "location" : {
+        "@type" : "Place",
+        "name" : "Fedict",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brussels",
+          "postalCode": "1000",
+          "streetAddress": "Simon Bolivarlaan 30"
+        }
+      },
+      "minute-nl":"http://www.belgif.be/files/opendataportals_201610_nl.pdf",
+      "minute-fr":"http://www.belgif.be/files/opendataportals_201610_fr.pdf"
     }
   ]
 }
